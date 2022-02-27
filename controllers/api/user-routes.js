@@ -1,6 +1,8 @@
 const router = require('express').Router();
 const { User } = require("../../models");
 
+// GET USER ROUTES -----------------------------------------------------------------------------------------------------------------------------
+
 // GET ALL USERS | /API/USERS
 router.get('/', (req, res) => {
   // RUN .FIND_ALL() METHOD

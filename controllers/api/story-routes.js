@@ -99,7 +99,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// DELETE STORY WITH AUTHENTICATION | /API/STORIES/:ID
+// DELETE STORY | LOGIN REQUIRED | /API/STORIES/:ID
 router.delete('/:id', withAuth, (req, res) => {
     // RUN DESTROY FUNCTION USING INPUTTED ID
     Story.destroy({
@@ -120,7 +120,7 @@ router.delete('/:id', withAuth, (req, res) => {
     });
 });
 
-// EDIT STORY WITH AUTHENTICATION | /API/STORIES/:ID
+// EDIT STORY | LOGIN REQUIRED | /API/STORIES/:ID
 router.put('/:id', withAuth, (req, res) => {
     Story.update(
         // ADD NEW/EDITED TITLE AND BODY 
