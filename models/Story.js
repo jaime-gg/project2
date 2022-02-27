@@ -18,8 +18,13 @@ Story.init(
             allowNull: false
         },
         body: {
-            type: DataTypes.STRING,
-            allowNull: false,
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        published: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false, 
+            defaultValue: false
         },
         // PULL DATA FROM USER MODEL | USER ID
         user_id: {

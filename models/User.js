@@ -32,6 +32,10 @@ User.init(
                 isEmail: true
             }
         },
+        about_me: {
+            type: DataTypes.TEXT,
+            allowNull: true
+        },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
