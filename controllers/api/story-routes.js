@@ -1,20 +1,8 @@
 const router = require('express').Router();
 const { User, Story, Comment } = require("../../models");
 
-// CREATE A NEW STORY | /API/STORIES
-router.post('/', (req, res) => {
-    // RUN CREATE METHOD
-    Story.create({
-        user_id: req.session.user_id,
-        title: req.body.title,
-        body: req.body.body
-    })
-    .then(dbStoryData => res.json(dbStoryData))
-    .catch(err => {
-        res.status(500).json(err);
-        console.log(err);
-    });
-});
+
+// GET STORY ROUTES ----------------------------------------------------------------------------------------------------------------------------
 
 // GET ALL STORIES | /API/STORIES
 router.get('/', (req, res) => {
@@ -85,6 +73,44 @@ router.get('/:id', (req, res) => {
         if (!dbStoryData) {
           res.status(404).json({ message: 'No story found with this id' });
           return;
+        }
+        res.json(dbStoryData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+// ADD / DELETE / EDIT STORIES -----------------------------------------------------------------------------------------------------------------
+
+// CREATE A NEW STORY | /API/STORIES
+router.post('/', (req, res) => {
+    // RUN CREATE METHOD
+    Story.create({
+        user_id: req.session.user_id,
+        title: req.body.title,
+        body: req.body.body
+    })
+    .then(dbStoryData => res.json(dbStoryData))
+    .catch(err => {
+        res.status(500).json(err);
+        console.log(err);
+    });
+});
+
+// DELETE STORY WITH AUTHENTICATION | /API/STORIES/:ID
+router.delete('/:id', withAuth, (req, res) => {
+    // RUN DESTROY FUNCTION USING INPUTTED ID
+    Story.destroy({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbStoryData => {
+        if (!dbStoryData) {
+            res.status(404).json({ message: 'No story found with this id' });
+            return;
         }
         res.json(dbStoryData);
     })
