@@ -18,6 +18,7 @@ router.post('/', (req, res) => {
 
 // GET ALL STORIES | /API/STORIES
 router.get('/', (req, res) => {
+    // RUN FIND ALL METHOD
     Story.findAll({
         // NEWER STORY AT THE TOP OF PAGE 
         order: [['created_at', 'DESC']],
@@ -33,8 +34,8 @@ router.get('/', (req, res) => {
                 model: Comment,
                 attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
                 include: {
-                model: User,
-                attributes: ['username']
+                    model: User,
+                    attributes: ['username']
                 }
             },
             {
@@ -50,6 +51,47 @@ router.get('/', (req, res) => {
     });
 });
 
-
+// GET A SINGLE STORY | /API/STORIES/:ID
+// COULD BE USEFUL FOR VIEW-AUTHOR-ROUTES
+router.get('/:id', (req, res) => {
+    // RUN FIND_ONE METHOD 
+    Story.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'body',
+            'title',
+            'created_at'
+        ],
+        // PULL DATA FROM COMMENT AND USER MODELS
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbStoryData => {
+        if (!dbStoryData) {
+          res.status(404).json({ message: 'No story found with this id' });
+          return;
+        }
+        res.json(dbStoryData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;
