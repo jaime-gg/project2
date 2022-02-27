@@ -120,4 +120,32 @@ router.delete('/:id', withAuth, (req, res) => {
     });
 });
 
+// EDIT STORY WITH AUTHENTICATION | /API/STORIES/:ID
+router.put('/:id', withAuth, (req, res) => {
+    Story.update(
+        // ADD NEW/EDITED TITLE AND BODY 
+        {
+            title: req.body.title,
+            body: req.body.body
+        },
+        // USE INPUTTED ID 
+        {
+            where: {
+                id: req.params.id
+            }
+        }
+    )
+    .then(dbStoryData => {
+        if (!dbStoryData) {
+            res.status(404).json({ message: 'No story found with this id' });
+            return;
+        }
+        res.json(dbStoryData);
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+  });
+
 module.exports = router;
