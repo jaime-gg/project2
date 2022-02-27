@@ -1,10 +1,25 @@
 const router = require('express').Router();
 const { User } = require("../../models");
 
+// GET ALL USERS | /API/USERS
+router.get('/', (req, res) => {
+  // RUN .FIND_ALL() METHOD
+  User.findAll({
+    // EXCLUDE HASHED PASSWORD 
+    attributes: { exclude: ['password'] }
+  })
+  .then(dbUserData => res.json(dbUserData))
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
+});
 
+// -------------------------------------------------------------------------------------------------------------------------
 
 // CREATE A NEW USER | SIGNUP 
 router.post('/', (req, res) => {
+  // RUN CREATE METHOD
   User.create({
     email: req.body.username,
     username: req.body.username,
@@ -25,6 +40,7 @@ router.post('/', (req, res) => {
 
 // CREATE A NEW SESSION | LOGIN 
 router.post('/login', (req, res) => {
+  // RUN FIND_ONE METHOD | LOGIN TO EXISTING ACCOUNT
   User.findOne({
     where: {
       email: req.body.email
@@ -63,5 +79,6 @@ router.post('/logout', (req, res) => {
       res.status(404).end();
   }
 });
+
 
 module.exports = router;
