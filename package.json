@@ -1,0 +1,30 @@
+{
+  "name": "storeez",
+  "version": "1.0.0",
+  "description": "As a team we have found that there is a need for an easy and well maintained platform for aspiring authors to post their content. As such our team aims to develop an application to allow users to self publish their written material. \r We will provide users with the ability to create accounts, login, privately store their works, and publicly publish their works. Additionally, we wish to include bookmark features and the ability for readers and authors to leave comments. \r ...",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaime-gg/project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaime-gg/project2/issues"
+  },
+  "homepage": "https://github.com/jaime-gg/project2#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  }
+}
