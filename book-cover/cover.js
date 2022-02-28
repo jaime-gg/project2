@@ -1,5 +1,6 @@
 let coverColor;
 let textColor;
+let textfield;
 let title = "hi";
 let textSlider;
 // let inconsolata;
@@ -17,11 +18,12 @@ function setup() {
   textSlider.style("width", "80px");
 
   textAlign(CENTER, CENTER);
+  textfield = select("#title");
 }
 
 function draw() {
   background(coverColor.color());
-  text(title, width / 2, height / 2);
+  text(textfield.value(), width / 2, height / 2);
   fill(textColor.color());
   textSize(textSlider.value());
 }
