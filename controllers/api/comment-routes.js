@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
+const withAuth = require('../../utils/with-auth');
 
 // GET COMMENTS ROUTE --------------------------------------------------------------------------------------------------------------------------
 

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Story, Comment } = require('../../models');
+const withAuth = require('../../utils/with-auth');
 
 
 // GET STORY ROUTES ----------------------------------------------------------------------------------------------------------------------------
