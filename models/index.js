@@ -2,6 +2,7 @@
 const Story = require('./Story');
 const User = require('./User');
 const Comment = require('./Comment');
+const Cover = require('./Cover');
 
 
 // ASSOCIATIONS
@@ -13,7 +14,17 @@ Story.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
+User.hasMany(Cover,{
+  foreignKey: 'user_id'
+});
 
+Cover.belongsTo(Story, {
+  foreignKey: 'story_id'
+});
+
+Cover.belongsTo(Story, {
+  foreignKey: 'title'
+});
 
 Comment.belongsTo(User, {
   foreignKey: 'user_id'
