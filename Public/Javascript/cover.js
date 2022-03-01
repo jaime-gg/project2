@@ -1,15 +1,18 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-use-before-define */
 let coverColor;
 let textColor;
 let textfield;
 let title = 'hi';
 let textSlider;
+let titleSize;
 
 // let inconsolata;
 // function preload() {
 //   inconsolata = loadFont("assets/inconsolata.otf");
 // }
+
+function uploadCover() {
+  save('bookCover.jpg');
+}
 
 function setup() {
   createCanvas(250, 350);
@@ -23,20 +26,19 @@ function setup() {
   textAlign(CENTER, CENTER);
   textfield = select('#title');
   button = createButton('save');
-  button.mousePressed(uploadCover());
+  // button.mousePressed(uploadCover());
 }
 
 function draw() {
+  titleSize = textSlider.value();
+  console.log(titleSize);
   background(coverColor.color());
   text(textfield.value(), width / 2, height / 2);
   fill(textColor.color());
   textSize(textSlider.value());
 }
 
-function uploadCover() {
-  save('bookCover.jpg');
-}
-
+(module.exports = coverColor), textColor, titleSize;
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
 
 //use router post to save() p5 sketch with the vairables above into a database connected to story content +user info
@@ -54,6 +56,5 @@ function uploadCover() {
 
 // https://github.com/processing/p5.js/issues/3353
 // extracted using toDataUrl request => returned as base64 stream =>
-
 
 // jk i think im gonna jsut save the user valeus to the db so that the covers can be generated to the page live
