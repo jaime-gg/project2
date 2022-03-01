@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { Story, User, Comment } = require('../models');
 
 //ADD ROUTES THAT LOAD ENTIRE PAGE OF STORIES 
 
