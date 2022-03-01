@@ -54,3 +54,6 @@ function uploadCover() {
 
 // https://github.com/processing/p5.js/issues/3353
 // extracted using toDataUrl request => returned as base64 stream =>
+
+
+// jk i think im gonna jsut save the user valeus to the db so that the covers can be generated to the page live
