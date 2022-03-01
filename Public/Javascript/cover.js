@@ -38,7 +38,8 @@ function draw() {
   textSize(textSlider.value());
 }
 
-(module.exports = coverColor), textColor, titleSize;
+module.exports = coverColor, textColor, titleSize;
+
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
 
 //use router post to save() p5 sketch with the vairables above into a database connected to story content +user info

@@ -1,9 +1,4 @@
 const { Model, DataTypes } = require('sequelize');
-const {
-  coverColor,
-  textColor,
-  titleSize,
-} = require('../Public/Javascript/cover');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
@@ -27,21 +22,30 @@ Cover.init(
       },
     },
     title: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       references: {
         model: 'story',
         key: 'title',
       },
     },
-    coverColor: {},
-    titleColor: {},
-    fontSize: {},
+    coverColor: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    titleColor: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    fontSize: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'story',
+    modelName: 'cover',
   }
 );
 
