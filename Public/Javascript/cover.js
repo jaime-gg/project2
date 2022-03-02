@@ -1,9 +1,13 @@
 let coverColor;
 let textColor;
 let textfield;
+let border;
 let title = 'hi';
 let textSlider;
 let titleSize;
+let gradientCol1;
+let gradientCol2;
+
 
 // let inconsolata;
 // function preload() {
