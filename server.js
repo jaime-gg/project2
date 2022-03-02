@@ -1,6 +1,6 @@
-// storeEZ 
+// storeEZ
 
-// DEPENDENCIES 
+// DEPENDENCIES
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -37,7 +37,7 @@ app.set('view engine', 'handlebars');
 // USE THE PROVIDED ROUTES
 app.use(routes);
 
-// CONNECT TO DB AND SERVER 
+// CONNECT TO DB AND SERVER
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
