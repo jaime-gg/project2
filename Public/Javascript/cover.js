@@ -5,8 +5,7 @@ let border;
 let title = 'hi';
 let textSlider;
 let titleSize;
-let gradientCol1;
-let gradientCol2;
+let gradientCol;
 let fontMenu;
 var inc = .01;
 

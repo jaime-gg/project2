@@ -28,15 +28,15 @@ Cover.init(
     },
     cover_color: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     title_color: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     font_size: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
