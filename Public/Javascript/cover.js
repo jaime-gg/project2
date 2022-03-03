@@ -7,7 +7,7 @@ let textSlider;
 let titleSize;
 let gradientCol1;
 let gradientCol2;
-
+let fontMenu;
 
 // let inconsolata;
 // function preload() {
@@ -20,9 +20,16 @@ function uploadCover() {
 
 function setup() {
   createCanvas(250, 350);
+  fontMenu = createSelect();
+  fontMenu.option('Barrio');
+  fontMenu.option('Codystar');
+  fontMenu.option('Homemade Apple');
+  fontMenu.option('IM Fell English SC');
+  fontMenu.option('Libre Barcode 128 Text');
+  fontMenu.option('Turret Road');
+  fontMenu.option('UnifrakturCook');
   coverColor = createColorPicker('#ed225d');
   textColor = createColorPicker('#000');
-  //   textFont(inconsolata);
 
   textSlider = createSlider(10, 100, 30);
   textSlider.style('width', '80px');
@@ -31,18 +38,20 @@ function setup() {
   textfield = select('#title');
   button = createButton('save');
   // button.mousePressed(uploadCover());
+  console.log(fontMenu.value());
 }
 
 function draw() {
   titleSize = textSlider.value();
-  console.log(titleSize);
+  //console.log(titleSize);
   background(coverColor.color());
+  textFont(fontMenu.value());
   text(textfield.value(), width / 2, height / 2);
   fill(textColor.color());
   textSize(textSlider.value());
 }
 
-module.exports = coverColor, textColor, titleSize;
+//module.exports = coverColor, textColor, titleSize;
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
 
