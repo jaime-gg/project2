@@ -5,12 +5,12 @@ class Cover extends Model {}
 
 Cover.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
+    // id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   primaryKey: true,
+    //   autoIncrement: true,
+    // },
     //pulling data from story model + user id + story id
     story_id: {
       type: DataTypes.INTEGER,
@@ -26,22 +26,15 @@ Cover.init(
         key: 'id',
       },
     },
-    title: {
-      type: DataTypes.STRING,
-      references: {
-        model: 'story',
-        key: 'title',
-      },
-    },
-    coverColor: {
+    cover_color: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    titleColor: {
+    title_color: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    fontSize: {
+    font_size: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },

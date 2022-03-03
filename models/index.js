@@ -14,17 +14,19 @@ Story.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-User.hasMany(Cover,{
-  foreignKey: 'user_id'
+// User.hasMany(Cover,{
+//   foreignKey: 'user_id'
+// });
+
+Story.hasOne(Cover,{
+  foreignkey: 'cover_id'
 });
 
 Cover.belongsTo(Story, {
   foreignKey: 'story_id'
 });
 
-Cover.belongsTo(Story, {
-  foreignKey: 'title'
-});
+
 
 Comment.belongsTo(User, {
   foreignKey: 'user_id'

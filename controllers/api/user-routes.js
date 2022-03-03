@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   // RUN CREATE METHOD
   User.create({
-    email: req.body.username,
+    email: req.body.email,
     username: req.body.username,
     password: req.body.password
   })

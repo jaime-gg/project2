@@ -8,6 +8,7 @@ let titleSize;
 let gradientCol1;
 let gradientCol2;
 let fontMenu;
+var inc = .01;
 
 // let inconsolata;
 // function preload() {
@@ -17,6 +18,10 @@ let fontMenu;
 function uploadCover() {
   save('bookCover.jpg');
 }
+
+// function gradientBG(){
+//   for (var x=0; x<)
+// }
 
 function setup() {
   createCanvas(250, 350);
@@ -38,10 +43,13 @@ function setup() {
   textfield = select('#title');
   button = createButton('save');
   // button.mousePressed(uploadCover());
-  console.log(fontMenu.value());
+  
 }
 
 function draw() {
+
+  loadPixels();
+  noFill();
   titleSize = textSlider.value();
   //console.log(titleSize);
   background(coverColor.color());
@@ -51,7 +59,7 @@ function draw() {
   textSize(textSlider.value());
 }
 
-//module.exports = coverColor, textColor, titleSize;
+
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
 
