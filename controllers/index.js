@@ -9,7 +9,7 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/', homepageRoutes);
 
 
-// FOR ANY FALSE ENDPOINTS 
+// FOR ANY FALSE ENDPOINTS
 router.use((req, res) => {
   res.status(404).end();
 });
