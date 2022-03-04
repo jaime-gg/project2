@@ -16,15 +16,33 @@
   
 
     <style>
-      .row.content {height: 500px}
+    .row.content {height: 500px}
     .sidenav {
       background-color: #b6b6b6;
       height: 100%;
+    }
+    header {
+     background-color: rgb(179, 179, 179);
+     color: rgb(0, 0, 0);
+     padding: 15px;
+     border-radius: 25px;
+     border:rgb(0, 0, 0) solid;
+     text-align: center;
+     width: 100%;
+     padding: 40px 35px;
     }
     footer {
       background-color: rgb(255, 255, 255);
       color: rgb(0, 0, 0);
       padding: 15px;
+      border-radius: 25px;
+      border:rgb(0, 0, 0) solid;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      padding: 40px 35px;
       
     }
     @media screen and (max-width: 300px) {
@@ -38,10 +56,12 @@
     <title>StoreEZ</title>
   </head>
   <body>
+    <header>
     <div class="jumbotron text-center">
       <h1>StoreEZ</h1>
       <p>Words go here</p> 
     </div>
+    </header>
 
     <div class="container-fluid">
       <div class="row content">
@@ -68,14 +88,14 @@
     <title>cover generator</title>
   </head>
   <body>
-    <form>
+    <form class="container-fluid text-center">
       <label for="title">Title :</label><br />
       <input type="text" id="title" name="title" /><br />
       
       <div id="canvas"></div>
     </form>
   </body>
-<footer>
+<footer class="container-fluid text-center"> 
   <h2>Created By</h2>
   <div>
     <p>
