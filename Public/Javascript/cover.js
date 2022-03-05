@@ -32,11 +32,11 @@ function draw() {
   //console.log(titleSize);
   background(coverColor.color());
   // gradientBG();
-
+textWrap(WORD);
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(fontMenu.value());
-  text(textfield.value(), width / 2, height / 2);
+  text(textfield.value(), 0, 0, width, height);
   textSize(textSlider.value());
 }
 
