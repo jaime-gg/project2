@@ -38,7 +38,7 @@ function draw() {
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(currentFont);
-  text(textfield.value(), width / 2, height / 2);
+  text(textfield.value(), 0,0, width, height);
   textSize(titleSize);
 }
 
