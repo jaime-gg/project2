@@ -158,16 +158,19 @@ form label {
   gap: 35px 20px; 
   height:100%;
   padding: 5%;
+  color: var(--light);
 }
 
-.login-pg .btn{
+.login-pg button.btn{
   color: #5e5e5e;
   background:#d3d3d3;
 }
 
 .login-pg .btn:hover{
- background:var(--tertiary);
- color: var(--light)
+ background:var(--primary);
+ color: var(--quaternary);
+ 
+ border: 1px solid var(--secondary);
 }
 
 .forms{
@@ -188,7 +191,7 @@ form label {
 
 
 .bg{
-  background: var(--primary);
+  background: var(--quaternary);
   box-shadow: 1px 1px 3px var(--tertiary);
   padding: 5%;
   border-radius: 5px;
