@@ -19,6 +19,7 @@ html body  {
   margin: 0;
   font-family: 'Roboto Mono', monospace;
   height:100vh;
+  background:var(--light);
 }
 
 .logo{
@@ -95,7 +96,7 @@ a.nav-link{
   color: var(--quaternary);
 }
 
-.form-control{
+.input-group >.form-control {
   background: var(--dark);
   color: var(--light);
   text-shadow:1px 1px 5px var(--tertiary);
@@ -131,7 +132,7 @@ footer {
   padding: 1%;
   font-size: 110%;
   color:var(--quaternary);
-  
+  border-top: 1px dashed var(--light);
 }
 
 footer a{
@@ -146,30 +147,59 @@ form label {
   display: block;
 }
 
-/* LOGIN PAGE */
+/* LOGIN PAGE --------------------------------------------------------------------------- */
 
 .login-pg{
   display:flex;
   justify-content: space-around;
-  padding: 40px 10px;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  align-content:start;
+  gap: 35px 20px; 
+  height:100%;
+  padding: 5%;
 }
 
 .login-pg .btn{
   color: #5e5e5e;
   background:#d3d3d3;
-  margin-top: 10px;
 }
 
 .login-pg .btn:hover{
-  background: #d7ffb6;
- color:#414141;
+ background:var(--tertiary);
+ color: var(--light)
 }
 
 .forms{
-  background:#d7ffb6;
-  padding: 3%;
+
+  flex:1;
   border-radius: 5px;
+
 }
+
+.log-form{
+  display:flex;
+  flex-flow:column;
+  align-items:center;
+  justify-content: space-around;
+  gap: 20px 30px; 
+  min-width:250px;
+}
+
+
+.bg{
+  background: var(--primary);
+  box-shadow: 1px 1px 3px var(--tertiary);
+  padding: 5%;
+  border-radius: 5px;
+  flex:1;
+}
+
+.login-pg-btn{
+  flex:1;
+  
+}
+
 
 /* VIEW AUTHORS -------------------------------------------------------------------------------------------*/
 
