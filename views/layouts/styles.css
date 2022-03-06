@@ -30,12 +30,12 @@ a:hover {
   transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
+  border: 1px solid white;
 }
 
 .btn:hover {
-  background-color: #7c7c7c;
-  color: white;
-}
+  background-color: #d7ffb6;
+  border: 1px solid white;}
 
 #canvas-div {
   height: 100%;
@@ -45,9 +45,18 @@ a:hover {
 }
 .sidenav {
   background-color: #d3d3d3;
-  height: 100%;
+  padding: 10px;
   height:100vh;
 }
+
+
+
+.form-control{
+    background: #44444400;
+    color: rgb(83, 83, 83);
+    border: 2px solid white;
+}
+
 
 header {
   background: #5e5e5e;
@@ -63,21 +72,21 @@ header {
 
 
 footer {
-    background: #5e5e5e;
+    background: #d3d3d3;
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
-  color:white;
+  color:#414141;
   
 }
 
 footer a {
-  color: #c5c5c5;
+    color:black;
 }
 
 footer a:hover {
-    color: #a3ff58;
+    color: #d7ffb6;
   }
 
 /* @media screen and (max-width: 300px) {
