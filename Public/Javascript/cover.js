@@ -3,8 +3,8 @@
 let coverColor;
 let textColor;
 let textfield;
-let border;
-let title = 'hi';
+let borderWSlider;
+let borderColor;
 let textSlider;
 let titleSize;
 let gradientCol;
@@ -14,37 +14,50 @@ var Canvas;
 let noiseVal;
 let noiseScale = 0.02;
 
-
-
-
 function setup() {
   Canvas = createCanvas(250, 350);
   Canvas.parent('canvas-div');
   coverInputs();
-  
+
   //gradientCol = createColorPicker('#04e50d');
   // button.mousePressed(uploadCover());
 }
 
 function draw() {
- // console.log(coverColor.color.levels);
-
+  // console.log(coverColor.color.levels);
   //console.log(titleSize);
+
   background(coverColor.color());
+  stroke(borderColor.value());
+  strokeWeight(borderWSlider.value());
+  fill(coverColor.color());
+  rect(0,0,width, height);
+  noStroke();
   // gradientBG();
+<<<<<<< HEAD
 textWrap(WORD);
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(fontMenu.value());
   text(textfield.value(), 0, 0, width, height);
   textSize(textSlider.value());
+=======
+  let currentFont = fontMenu.value();
+  fill(textColor.color());
+  titleSize = textSlider.value();
+  textFont(currentFont);
+  text(textfield.value(), 0,0, width, height);
+  textSize(titleSize);
+>>>>>>> 831aa2ac76b2a656ac81562b103374338e86b8ec
 }
 
-function coverInputs(){
+function coverInputs() {
   coverColor = createColorPicker('#ed225d');
+  coverColor.parent('canvas-div');
   textColor = createColorPicker('#000');
   textColor.parent('canvas-div');
-  coverColor.parent('canvas-div');
+  borderColor = createColorPicker('#000');
+  borderColor.parent('canvas-div');
 
   fontMenu = createSelect();
   fontMenu.option('Barrio');
@@ -59,6 +72,10 @@ function coverInputs(){
   textSlider = createSlider(10, 100, 30);
   textSlider.style('width', '80px');
   textSlider.parent('canvas-div');
+
+  borderWSlider = createSlider(0, 100, 30);
+  borderWSlider.style('width', '80px');
+  borderWSlider.parent('canvas-div');
 
   textAlign(CENTER, CENTER);
   textfield = select('#title');
@@ -82,4 +99,3 @@ function uploadCover() {
 }
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
-
