@@ -44,4 +44,4 @@ Story.hasMany(Comment, {
   foreignKey: 'story_id'
 });
 
-module.exports = {User, Comment, Story };
+module.exports = {User, Comment, Story, Cover };
