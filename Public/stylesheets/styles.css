@@ -94,6 +94,10 @@ footer a:hover {
     color: #d7ffb6;
   }
 
+  form label {
+    display: block;
+  }
+
 /* @media screen and (max-width: 300px) {
   .sidenav {
     height: auto;
