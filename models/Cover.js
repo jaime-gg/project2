@@ -5,13 +5,6 @@ class Cover extends Model {}
 
 Cover.init(
   {
-    // id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: false,
-    //   primaryKey: true,
-    //   autoIncrement: true,
-    // },
-    //pulling data from story model + user id + story id
     story_id: {
       type: DataTypes.INTEGER,
       references: {
