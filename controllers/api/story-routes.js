@@ -91,7 +91,8 @@ router.post('/', (req, res) => {
   Story.create({
     user_id: req.session.user_id,
     title: req.body.title,
-    body: req.body.body
+    body: req.body.body,
+    published: req.body.published
   })
     .then(dbStoryData => res.json(dbStoryData))
     .catch(err => {
