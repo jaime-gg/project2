@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User, Story } = require('../models');
 
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF A SPECIFIC AUTHOR'S STORIES
-router.get('/explore-authors', (req, res) => {
+router.get('/', (req, res) => {
   User.findAll({
     attributes: [
       'id',
