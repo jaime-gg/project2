@@ -45,21 +45,21 @@
           </div>
           <ul class="nav nav-pills nav-stacked">
             <li class="nav-item">
-              <a class="nav-link " href="#">Home</a>
+              <a class="nav-link " href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Explore Authors</a>
+              <a class="nav-link" href="/authors">Explore Authors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Explore Stories</a>
             </li>
             {{#if loggedIn}}
             <li>
-                <a href="/logout">logout</a>
+                <a href="/logout">Logout</a>
                 </li>
           {{else}}
           <li>
-              <a href="/login">login</a>
+              <a href="/login">Login</a>
           </li>
           {{/if}}
           </ul>

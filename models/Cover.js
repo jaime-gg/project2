@@ -36,8 +36,20 @@ Cover.init(
     },
     font_size: {
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
     },
+    font: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    border_color:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    border_size:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    }
   },
   {
     sequelize,

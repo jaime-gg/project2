@@ -1,6 +1,17 @@
+:root {
+  --primary: #d7ffb6;
+  --secondary: #d3d3d3;
+  --tertiary: #5e5e5e;
+  --quaternary: #414141;
+  --light: #f8f8f8;
+  --dark: #44444400;
+}
+
 * {
   box-sizing: border-box;
 }
+
+/* MAIN LAYOUT --------------------------------------------------------------------------------------------*/
 
 html body  {
   height: 100%;
@@ -12,11 +23,12 @@ html body  {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--light);
   transition: color 0.1s;
 }
+
 a:hover {
-  color: #5e5e5e;
+  color: var(--tertiary);
 }
 
 .row{
@@ -24,27 +36,30 @@ a:hover {
 }
 
 .btn {
-  background-color: #ffffff;
-  color: #5e5e5e;
+  background-color: var(--light);
+  color: var(--tertiary);
   font-weight: bold;
   transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid white;
+  border: 1px solid var(--light);
 }
 
 .btn:hover {
-  background-color: #d7ffb6;
-  border: 1px solid white;}
+  background-color: var(--primary);
+  border: 1px solid var(--light); 
+}
 
 #canvas-div {
   height: 100%;
 }
+
 .row.content {
   height: 500px;
 }
+
 .sidenav {
-  background-color: #d3d3d3;
+  background-color: var(--secondary);
   padding: 10px;
   height:100vh;
   font-weight: 600;
@@ -52,14 +67,14 @@ a:hover {
 }
 
 .active{
-    background: #ffffff93;
-    color:#414141;
+  background: var(--light);
+  color: var(--quaternary);
 }
 
 .form-control{
-    background: #44444400;
-    color: rgb(83, 83, 83);
-    border: 2px solid white;
+  background: var(--dark);
+  color: var(--quaternary);
+  border: 2px solid var(--light);
 }
 
 .login-pg{
@@ -86,39 +101,56 @@ a:hover {
 }
 
 header {
-  background: #5e5e5e;
-  color: #ffffff;
+  background: var(--tertiary);
+  color: var(--light);
   display: flex;
   justify-content: space-between;
   align-items: end;
   padding: 0 3%;
 }
- header p{
-     font-style: italic;
- }
 
+header p{
+  font-style: italic;
+}
 
 footer {
-    background: #d3d3d3;
+  background: var(--secondary);
   display: flex;
   justify-content: center;
   padding: 1%;
   font-size: 110%;
-  color:#414141;
+  color:var(--quaternary);
   
 }
 
-footer a {
-    color:black;
+footer a:hover {
+  color: var(--primary);
 }
 
-footer a:hover {
-    color: #d7ffb6;
-  }
+form label {
+  display: block;
+}
 
-  form label {
-    display: block;
-  }
+
+/* VIEW AUTHORS -------------------------------------------------------------------------------------------*/
+
+.user {
+  margin: 20px 10px;
+  background-color: var(--primary);
+  border: 2px solid var(--tertiary);
+  padding: 10px;
+}
+
+.user-list {
+  list-style: none;
+}
+
+.username-link {
+  color: var(--quaternary);
+  text-decoration: none;
+}
+
+/* MOBILE RESPONSIVENESS  ---------------------------------------------------------------------------------*/
 
 /* @media screen and (max-width: 300px) {
   .sidenav {

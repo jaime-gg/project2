@@ -34,21 +34,12 @@ function draw() {
   rect(0,0,width, height);
   noStroke();
   // gradientBG();
-<<<<<<< HEAD
 textWrap(WORD);
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(fontMenu.value());
   text(textfield.value(), 0, 0, width, height);
   textSize(textSlider.value());
-=======
-  let currentFont = fontMenu.value();
-  fill(textColor.color());
-  titleSize = textSlider.value();
-  textFont(currentFont);
-  text(textfield.value(), 0,0, width, height);
-  textSize(titleSize);
->>>>>>> 831aa2ac76b2a656ac81562b103374338e86b8ec
 }
 
 function coverInputs() {
