@@ -21,6 +21,13 @@ html body  {
   height:100vh;
 }
 
+.logo{
+  width:25%;
+}
+
+h1{
+  font-weight: 600;
+}
 a {
   text-decoration: none;
   color: var(--light);
@@ -64,6 +71,11 @@ a:hover {
   height:100vh;
   font-weight: 600;
   font-size: large;
+  text-shadow:1px 1px 5px var(--tertiary);
+}
+
+.nav:hover{
+text-shadow: none;
 }
 
 .active{
@@ -73,9 +85,56 @@ a:hover {
 
 .form-control{
   background: var(--dark);
-  color: var(--quaternary);
+  color: var(--light);
+  text-shadow:1px 1px 5px var(--tertiary);
   border: 2px solid var(--light);
 }
+
+::placeholder{
+  text-shadow: none;
+}
+
+.input-group{
+  box-shadow:1px 1px 5px var(--tertiary);
+}
+
+header {
+  background: var(--tertiary);
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 3% 0 0;
+}
+
+header p{
+  font-style: italic;
+  font-size: 100%;
+}
+
+footer {
+  background: var(--secondary);
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+  color:var(--quaternary);
+  
+}
+
+footer a{
+  text-shadow:1px 1px 5px var(--tertiary);
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+form label {
+  display: block;
+}
+
+/* LOGIN PAGE */
 
 .login-pg{
   display:flex;
@@ -99,38 +158,6 @@ a:hover {
   padding: 3%;
   border-radius: 5px;
 }
-
-header {
-  background: var(--tertiary);
-  color: var(--light);
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  padding: 0 3%;
-}
-
-header p{
-  font-style: italic;
-}
-
-footer {
-  background: var(--secondary);
-  display: flex;
-  justify-content: center;
-  padding: 1%;
-  font-size: 110%;
-  color:var(--quaternary);
-  
-}
-
-footer a:hover {
-  color: var(--primary);
-}
-
-form label {
-  display: block;
-}
-
 
 /* VIEW AUTHORS -------------------------------------------------------------------------------------------*/
 
