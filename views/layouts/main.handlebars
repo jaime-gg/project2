@@ -33,7 +33,7 @@
     <!-- top of pg -->
 
     <!-- navigation  -->
-    {{#if loggedIn}}
+    
     <div class="container-fluid">
       <div class="row">
         <div class="sidenav col-xs-3 col-lg-2">
@@ -53,10 +53,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Explore Stories</a>
             </li>
+            {{#if loggedIn}}
             <li>
                 <a href="/logout">logout</a>
                 </li>
-             
           {{else}}
           <li>
               <a href="/login">login</a>
