@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Story, User, Comment } = require('../models');
+const { Story, User, Comment, Cover } = require('../models');
 
 //RENDER ALL STORIES
 router.get('/', (req, res) => {
@@ -43,6 +43,14 @@ router.get('/', (req, res) => {
 // ADD ROUTES THAT ALLOW LOGIN AND SIGNUP PAGES TO RENDER
 
 // IF NOT ALREADY LOGGED IN, RENDER THE LOGIN PAGE
+router.get('/login', (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+
+  res.render('login');
+});
 
 // ADD ROUTES THAT ALLOW USERS TO VIEW SINGLE STORIES
 //    // THIS SHOULD INCLUDE ALL EXISTING COMMENTS
