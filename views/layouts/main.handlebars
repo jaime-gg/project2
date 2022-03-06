@@ -54,14 +54,22 @@
               <a class="nav-link" href="#">Explore Stories</a>
             </li>
           </ul>
+          {{else}}
+          <a href="/logout">logout</a>
+          {{/if}}
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
         </div>
       </div>
-      {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
     </div>
+    
     <!-- navigation -->
     {{{ body }}}
+
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
   </body>
   
     <footer class="d-inline text-center"> 
@@ -71,7 +79,7 @@
             <a href="https://github.com/ditazan">Dita Zanelli,</a>
             <a href="https://github.com/Autrose22">Autumn Barrios</a>
             <div class="footer-copyright text-center py-3">♥ 2022 Copyright:
-                <a href="https://github.com/jaime-gg/storeEZ"/"> StoreEz.com</a>
+                <a href="https://github.com/jaime-gg/storeEZ"/> StoreEz.com</a>
             </div>
         </div>
     </footer>
