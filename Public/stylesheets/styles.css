@@ -47,9 +47,14 @@ a:hover {
   background-color: #d3d3d3;
   padding: 10px;
   height:100vh;
+  font-weight: 600;
+  font-size: large;
 }
 
-
+.active{
+    background: #ffffff93;
+    color:#414141;
+}
 
 .form-control{
     background: #44444400;
