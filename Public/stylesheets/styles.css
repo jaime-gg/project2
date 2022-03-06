@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html body  {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  height:100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.1s;
+}
+
+a:hover {
+  color: #5e5e5e;
+}
+
+.row{
+    border: 1px, solid, red;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #5e5e5e;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  background-color: #d7ffb6;
+  border: 1px solid white; 
+}
+
+#canvas-div {
+  height: 100%;
+}
+
+.row.content {
+  height: 500px;
+}
+
+.sidenav {
+  background-color: #d3d3d3;
+  padding: 10px;
+  height:100vh;
+  font-weight: 600;
+  font-size: large;
+}
+
+.active{
+  background: #ffffff93;
+  color:#414141;
+}
+
+.form-control{
+  background: #44444400;
+  color: rgb(83, 83, 83);
+  border: 2px solid white;
+}
+
+
+header {
+  background: #5e5e5e;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 3%;
+}
+
+ header p{
+  font-style: italic;
+}
+
+
+footer {
+  background: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  font-size: 110%;
+  color:#414141;
+  
+}
+
+footer a {
+  color:black;
+}
+
+footer a:hover {
+  color: #d7ffb6;
+}
+
+form label {
+  display: block;
+}
+
+
+/* view authors -------------------------------------------------------------------------*/
+
+.user {
+  margin: 20px 10px;
+  background-color: #d7ffb6;
+  border: 2px solid #5e5e5e;
+  padding: 10px;
+}
+
+.user-list {
+  list-style: none;
+}
+
+.username-link {
+  color: red;
+  text-decoration: none;
+}
+
+
+
+/* @media screen and (max-width: 300px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+} */
