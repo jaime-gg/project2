@@ -6,8 +6,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 1
     },
     {
@@ -15,8 +15,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Homemade Apple', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 2
     },
     {
@@ -24,8 +24,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Codystar', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 3
     },
     {
@@ -33,8 +33,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'IM Fell English SC', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 4
     },
     {
@@ -42,8 +42,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 5
     },
     {
@@ -51,8 +51,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Homemade Apple', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 6
     },
     {
@@ -60,8 +60,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'IM Fell English SC', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 7
     },
     {
@@ -69,8 +69,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Homemade Apple', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 8
     },
     {
@@ -78,8 +78,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 9
     },
     {
@@ -87,8 +87,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: , 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 10
     },
     {
@@ -96,8 +96,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Homemade Apple', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 11
     },
     {
@@ -105,8 +105,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 12
     },
     {
@@ -114,8 +114,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Homemade Apple', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 13
     },
     {
@@ -123,8 +123,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 14
     },
     {
@@ -132,8 +132,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Turret Road', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 15
     },
     {
@@ -141,8 +141,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'UnifrakturCook', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#424044' ,
         story_id: 16
     },
     {
@@ -150,8 +150,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'canvas-div', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px' ,
+        border_color: '#1B181D' ,
         story_id: 17
     },
     {
@@ -159,8 +159,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px',
+        border_color: '#424044' ,
         story_id: 18
     },
     {
@@ -168,8 +168,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'canvas-div', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px',
+        border_color: '#1B181D' ,
         story_id: 19
     },
     {
@@ -177,8 +177,8 @@ const coverdata = [
         title_color: '#ffffff',
         font_size: '15px',
         font: 'Barrio', 
-        border_width: ,
-        border_color: ,
+        border_width: '5px',
+        border_color: '#424044',
         story_id: 20
     },
   ];
