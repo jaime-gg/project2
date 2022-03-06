@@ -9,10 +9,7 @@ let textSlider;
 let titleSize;
 let gradientCol;
 let fontMenu;
-var inc = 0.01;
 var Canvas;
-let noiseVal;
-let noiseScale = 0.02;
 
 function setup() {
   Canvas = createCanvas(250, 350);
@@ -86,7 +83,11 @@ function gradientBG() {
 }
 
 function uploadCover() {
-  save('bookCover.jpg');
+  var ref= database.ref('covers');
+  var data= {
+
+};
+ref.push(cover);
 }
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed

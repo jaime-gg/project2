@@ -7,7 +7,15 @@ const withAuth = require('../../utils/with-auth');
 router.get('/', (req, res) => {
   Cover.findAll({
     order: [['created_at', 'DESC']],
-    attribute: ['id', 'coverColor', 'titleColor', 'fontSize'],
+    attribute: [
+      'id',
+      'cover_color',
+      'title_color',
+      'font_size',
+      'font',
+      'border_size',
+      'border_color',
+    ],
     //pulling info from user and story tables
     include: [
       {
@@ -34,7 +42,15 @@ router.get('/id', (req, res) => {
       id: req.params.id,
     },
     order: [['created_at', 'DESC']],
-    attribute: ['id', 'coverColor', 'titleColor', 'fontSize'],
+    attribute: [
+      'id',
+      'cover_color',
+      'title_color',
+      'font_size',
+      'font',
+      'border_size',
+      'border_color',
+    ],
     //pulling info from user and story tables
     include: [
       {
@@ -63,12 +79,15 @@ router.get('/id', (req, res) => {
 //create p5 cover
 router.post('/', (req, res) => {
   Cover.create({
-    story_id: req.session.user_id,
+    story_id: req.session.story_id,
     user_id: req.body.user_id,
     title: req.body.title,
-    coverColor: req.body.coverColor,
-    titleColor: req.body.textColor,
-    fontSize: req.body.fontSize,
+    cover_color: req.body.cover_color,
+    title_color: req.body.title_color,
+    font: req.body.font,
+    font_size: req.body.font_size,
+    border_color: req.body.border_color,
+    border_size: req.body.border_size,
   })
     .then((dbCoverData) => res.json(dbCoverData))
     .catch((err) => {
@@ -101,9 +120,12 @@ router.delete('/:id', withAuth, (req, res) => {
 router.put('/:id', (req, res) => {
   Cover.update(
     {
-      coverColor: req.body.coverColor,
-      titleColor: req.body.titleColor,
-      fontSize: req.body.fontSize,
+      cover_color: req.body.cover_color,
+      title_color: req.body.title_color,
+      font: req.body.font,
+      font_size: req.body.font_size,
+      border_color: req.body.border_color,
+      border_size: req.body.border_size,
     },
     {
       where: {

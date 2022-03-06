@@ -70,7 +70,7 @@ a:hover {
   height:100vh;
   font-weight: 600;
   font-size: 100%;
-  text-shadow:1px 1px 5px var(--tertiary);
+  text-shadow:1px 1px 5px var(--quaternary);
 }
 .nav{
   margin:7%;
