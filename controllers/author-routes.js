@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
 
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF A SPECIFIC AUTHOR'S STORIES
 router.get('/:id', (req, res) => {
-  User.findAll({
+  User.findOne({
     attributes: [
       'id',
       'username',
