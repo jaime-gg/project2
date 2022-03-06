@@ -15,6 +15,7 @@ a {
   color: #ffffff;
   transition: color 0.1s;
 }
+
 a:hover {
   color: #5e5e5e;
 }
@@ -35,14 +36,17 @@ a:hover {
 
 .btn:hover {
   background-color: #d7ffb6;
-  border: 1px solid white;}
+  border: 1px solid white; 
+}
 
 #canvas-div {
   height: 100%;
 }
+
 .row.content {
   height: 500px;
 }
+
 .sidenav {
   background-color: #d3d3d3;
   padding: 10px;
@@ -52,14 +56,14 @@ a:hover {
 }
 
 .active{
-    background: #ffffff93;
-    color:#414141;
+  background: #ffffff93;
+  color:#414141;
 }
 
 .form-control{
-    background: #44444400;
-    color: rgb(83, 83, 83);
-    border: 2px solid white;
+  background: #44444400;
+  color: rgb(83, 83, 83);
+  border: 2px solid white;
 }
 
 
@@ -71,13 +75,14 @@ header {
   align-items: end;
   padding: 0 3%;
 }
+
  header p{
-     font-style: italic;
- }
+  font-style: italic;
+}
 
 
 footer {
-    background: #d3d3d3;
+  background: #d3d3d3;
   display: flex;
   justify-content: center;
   padding: 1%;
@@ -87,16 +92,37 @@ footer {
 }
 
 footer a {
-    color:black;
+  color:black;
 }
 
 footer a:hover {
-    color: #d7ffb6;
-  }
+  color: #d7ffb6;
+}
 
-  form label {
-    display: block;
-  }
+form label {
+  display: block;
+}
+
+
+/* view authors -------------------------------------------------------------------------*/
+
+.user {
+  margin: 20px 10px;
+  background-color: #d7ffb6;
+  border: 2px solid #5e5e5e;
+  padding: 10px;
+}
+
+.user-list {
+  list-style: none;
+}
+
+.username-link {
+  color: red;
+  text-decoration: none;
+}
+
+
 
 /* @media screen and (max-width: 300px) {
   .sidenav {
