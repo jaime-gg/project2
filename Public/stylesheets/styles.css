@@ -38,9 +38,7 @@ a:hover {
   color: var(--tertiary);
 }
 
-.row{
-    border: 1px, solid, red;
-}
+
 
 .btn {
   background-color: var(--light);
@@ -67,16 +65,30 @@ a:hover {
 
 .sidenav {
   background-color: var(--secondary);
-  padding: 10px;
+  padding:2%  1%;
   height:100vh;
   font-weight: 600;
-  font-size: large;
+  font-size: 100%;
   text-shadow:1px 1px 5px var(--tertiary);
 }
-
-.nav:hover{
+.nav{
+  margin:7%;
+  border-left: 2px solid var(--light);
+  box-shadow: -5px 0 5px -5px var(--tertiary);
+}
+a.nav-link:hover{
 text-shadow: none;
 }
+
+a.nav-link{
+  margin:1%;
+}
+
+.log:hover{
+  text-shadow: none;
+}
+
+
 
 .active{
   background: var(--light);
