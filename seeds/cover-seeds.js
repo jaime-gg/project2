@@ -1,0 +1,129 @@
+const { Cover } = require('../models');
+
+const coverdata = [
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 1
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 2
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 3
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 4
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 5
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 6
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 7
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 8
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 9
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 10
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 11
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 12
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 13
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 14
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 15
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 16
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 17
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 18
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 19
+    },
+    {
+        cover_color: ,
+        title_color: ,
+        font_size: ,
+        story_id: 20
+    },
+  ];
+
+
+const seedCovers = () => Cover.bulkCreate(coverdata);
+
+module.exports = seedCovers;
