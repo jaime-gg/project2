@@ -28,7 +28,9 @@ router.get('/', (req, res) => {
           attributes: ['username'],
         },
       },
-      { model: User, attributes: ['username, user_id'] },
+      {
+        model: User,
+        attributes: ['username', 'id'] },
     ],
   })
     .then((dbStoryData) => {
@@ -70,8 +72,20 @@ router.get('/:id', (req, res) => {
         include: [
           {
             model: User,
-            attributes: ['username'],
+            attributes: ['username','id'],
           },
+        ],
+      },
+      {
+        model: Cover,
+        attributes: [
+          'id',
+          'cover_color',
+          'title_color',
+          'font_size',
+          'font',
+          'border_size',
+          'border_color',
         ],
       },
     ],

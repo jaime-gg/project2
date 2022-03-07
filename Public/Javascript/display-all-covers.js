@@ -3,24 +3,24 @@
 
 const coverGen = function (p) {
   function fetchCover() {
-    fetch('api/stories')
+    fetch('/stories')
       .then((response) => response.json())
       .then((dbStoryData) => {
-        // console.log(dbStoryData);
+        console.log(dbStoryData);
         for (let i = 1; i < dbStoryData.length; i++) {
           const c = dbStoryData[i];
-           console.log(c);
-          fill(c.bg);
-          stroke(c.bc);
-          strokeWeight(c.bw);
-          rect(0, 0, width, height);
-          noStroke();
-          textWrap(WORD);
-          fill(c.tc);
-          var titleSize = c.ts;
-          textFont(c.tf);
-          text(c.tt, 0, 0, width, height);
-          textSize(titleSize);
+          console.log(c);
+          // fill(c.cover.cover_color);
+          // stroke(c.cover.border_color);
+          // strokeWeight(c.cover.border_size);
+          // rect(0, 0, width, height);
+          // noStroke();
+          // textWrap(WORD);
+          // fill(c.cover.title_color);
+          // var titleSize = c.cover.font_size;
+          // textFont(c.cover.font);
+           text(c.title, 0, 0, width, height);
+          // textSize(titleSize);
         }
       });
   }
@@ -63,10 +63,10 @@ function generatingAll() {
   fetch('api/stories')
     .then((response) => response.json())
     .then((dbStoryData) => {
-      // console.log(dbStoryData);
-      for (let i = 1; i < dbStoryData.length; i++) {
-        var myp5 = new p5(coverGen);
-      }
+      console.log(dbStoryData);
+      // for (let i = 1; i < dbStoryData.length; i++) {
+      //   var myp5 = new p5(coverGen);
+      // }
     });
 }
 

@@ -32,6 +32,9 @@ router.get('/', (req, res) => {
           'border_color',
         ],
       },
+      {
+        model: User,
+        attributes: ['username', 'id'] },
     ],
   })
     .then((dbStoryData) => {
@@ -64,7 +67,7 @@ router.get('/:id', (req, res) => {
       },
       {
         model: User,
-        attributes: ['username'],
+        attributes: ['username', 'id'],
       },
     ],
   })
