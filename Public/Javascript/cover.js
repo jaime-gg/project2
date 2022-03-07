@@ -15,14 +15,10 @@ function setup() {
   Canvas = createCanvas(250, 350);
   Canvas.parent('canvas-div');
   coverInputs();
-
-  //gradientCol = createColorPicker('#04e50d');
-  // button.mousePressed(uploadCover());
+// var config
 }
 
 function draw() {
-  // console.log(coverColor.color.levels);
-  //console.log(titleSize);
 
   background(coverColor.color());
   stroke(borderColor.value());
@@ -82,12 +78,12 @@ function gradientBG() {
   }
 }
 
-function uploadCover() {
-  var ref= database.ref('covers');
-  var data= {
+// function uploadCover() {
+//   var ref= database.ref('covers');
+//   var data= {
 
-};
-ref.push(cover);
-}
+// };
+// ref.push(cover);
+// }
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed

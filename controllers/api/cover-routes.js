@@ -1,7 +1,6 @@
 const router = require('express').Router();
 const { User, Story, Cover } = require('../../models');
 const withAuth = require('../../utils/with-auth');
-// const {coverColor, titleColor, fontSize}= require('../../Public/Javascript/cover');
 
 //get all covers
 router.get('/', (req, res) => {
@@ -28,7 +27,9 @@ router.get('/', (req, res) => {
       },
     ],
   })
-    .then((dbCoverData) => res.json(dbCoverData))
+    .then(dbCoverData => {
+      res.json(dbCoverData);
+    })
     .catch((err) => {
       console.log(err);
       res.status(500).json(err);

@@ -24,6 +24,18 @@ router.get('/', (req, res) => {
       {
         model: User,
         attributes: ['username']
+      },
+      {
+        model: Cover,
+        attributes:[
+          'id',
+          'cover_color',
+          'title_color',
+          'font_size',
+          'font',
+          'border_size',
+          'border_color',
+        ],
       }
     ]
   })
@@ -35,7 +47,7 @@ router.get('/', (req, res) => {
       });
     })
     .catch(err => {
-      console.log(err); 
+      console.log(err);
       res.status(500).json(err);
     });
 });
@@ -52,8 +64,8 @@ router.get('/login', (req, res) => {
 
 
 // RENDER A SINGLE POST
-router.get('/post/:id', (req, res) => {
-  Post.findOne({
+router.get('/story/:id', (req, res) => {
+  Story.findOne({
     where: {id: req.params.id},
 
     attributes: [
@@ -80,7 +92,7 @@ router.get('/post/:id', (req, res) => {
   })
     .then(dbPostData => {
       if(!dbPostData) {
-        res.status(404).json({message: 'No post found with this id'});
+        res.status(404).json({message: 'No story found with this id'});
         return;
       }
 

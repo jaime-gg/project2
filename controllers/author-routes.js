@@ -4,12 +4,7 @@ const { User, Story, Cover } = require('../models');
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF All AUTHORS
 router.get('/', (req, res) => {
   User.findAll({
-    attributes: [
-      'id',
-      'username',
-      'about_me',
-      'created_at'
-    ],
+    attributes: ['id', 'username', 'about_me', 'created_at'],
     include: [
       {
         model: Story,
@@ -17,14 +12,14 @@ router.get('/', (req, res) => {
       },
     ],
   })
-    .then(dbUserData => {
-      const users = dbUserData.map(user => user.get({ plain: true }));
+    .then((dbUserData) => {
+      const users = dbUserData.map((user) => user.get({ plain: true }));
       // pass a single post object into the homepage template
       res.render('authors', {
-        users
+        users,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -33,42 +28,40 @@ router.get('/', (req, res) => {
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF A SPECIFIC AUTHOR'S STORIES
 router.get('/:id', (req, res) => {
   User.findOne({
-    attributes: [
-      'id',
-      'username',
-      'about_me',
-      'created_at'
-    ],
+    where: {
+      id: req.params.id,
+    },
+    attributes: ['id', 'username', 'about_me', 'created_at'],
+
     include: [
       {
         model: Story,
         attributes: ['id', 'title'],
         include: [
           {
-            model: Cover
-          }
-        ]
+            model: Cover,
+          },
+        ],
       },
     ],
   })
-    .then(dbUserData => {
-      if(!dbUserData) {
-        res.status(404).json({message: 'No user found with this id'});
+    .then((dbUserData) => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
         return;
       }
 
-      const user = dbUserData.get({plain: true});
+      const user = dbUserData.get({ plain: true });
 
       res.render('single-user', {
         user,
-        loggedIn: req.session.loggedIn
+        loggedIn: req.session.loggedIn,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
 });
-
 
 module.exports = router;
