@@ -7,27 +7,21 @@ router.get('/', (req, res) => {
   Story.findAll({
     where: {
       // CURRENT SESSION GIVES THE USER ID | GATHER ALL STORIES WITH THIS USER ID
-      user_id: req.session.user_id
+      user_id: req.session.user_id,
     },
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'about_me',
-      'created_at'
-    ],
+    attributes: ['id', 'body', 'title', ' created_at'],
     include: [
       {
         model: Comment,
         attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ['username'],
+        },
       },
       {
         model: User,
-        attributes: ['username']
+        attributes: ['username'],
       },
       {
         model: Cover,
@@ -41,13 +35,13 @@ router.get('/', (req, res) => {
           'border_color',
         ],
       },
-    ]
+    ],
   })
-    .then(dbStoryData => {
-      const stories = dbStoryData.map(story => story.get({ plain: true }));
+    .then((dbStoryData) => {
+      const stories = dbStoryData.map((story) => story.get({ plain: true }));
       res.render('profile', { stories, loggedIn: true });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -57,40 +51,35 @@ router.get('/', (req, res) => {
 router.get('/edit/:id', withAuth, (req, res) => {
   // FIND BY PRIMARY KEY
   Story.findByPk(req.params.id, {
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'created_at'
-    ],
+    attributes: ['id', 'body', 'title', 'created_at'],
     include: [
       {
         model: Comment,
         attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ['username'],
+        },
       },
       {
         model: User,
-        attributes: ['username']
-      }
-    ]
+        attributes: ['username'],
+      },
+    ],
   })
-    .then(dbStoryData => {
+    .then((dbStoryData) => {
       if (dbStoryData) {
         const story = dbStoryData.get({ plain: true });
 
         res.render('edit-story', {
           story,
-          loggedIn: true
+          loggedIn: true,
         });
       } else {
         res.status(404).end();
       }
     })
-    .catch(err => {
+    .catch((err) => {
       res.status(500).json(err);
     });
 });
