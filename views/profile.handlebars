@@ -1,0 +1,31 @@
+{{> user-info user}}
+
+<section class="story">
+  <h2 class="story-header">Publish A New Story</h2>
+
+  <form class="new-story-form story-body">
+    <div>
+      <label class ="form-label" for="story-title">Title</label>
+      <input class="form-input title-input" type="text" id="story-title" name="story-title" />
+    </div>
+    <div>
+      <label class ="form-label" for="story-body">Content</label>
+      <input class="form-input" id="story-body" name="story-body" />
+    </div>
+    <button type="submit" class="button">Create</button>
+  </form>
+</section>
+
+{{#if stories.length}}
+<section>
+  <h2>Your Stories</h2>
+  <ol class="story-list">
+    {{#each stories as |story|}}
+    <li>
+      {{> story-info story}}
+      <a href="/dashboard/edit/{{story.id}}" class="edit-link">Edit Story</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
