@@ -6,28 +6,11 @@ router.get('/', (req, res) => {
   Story.findAll({
     // ORDERED SO NEWEST REMAIN AT TOP
     order: [['created_at', 'DESC']],
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'created_at',
-    ],
+    attributes: ['id', 'body', 'title', 'created_at'],
     include: [
       {
-        model: Comment,
-        attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      },
-      {
         model: Cover,
-        attributes:[
+        attributes: [
           'id',
           'cover_color',
           'title_color',
@@ -36,17 +19,25 @@ router.get('/', (req, res) => {
           'border_size',
           'border_color',
         ],
-      }
-    ]
+      },
+      {
+        model: Comment,
+        attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
+        include: {
+          model: User,
+          attributes: ['username'],
+        },
+      },
+    ],
   })
-    .then(dbStoryData => {
-      const stories = dbStoryData.map(story => story.get({ plain: true }));
+    .then((dbStoryData) => {
+      const stories = dbStoryData.map((story) => story.get({ plain: true }));
       res.render('homepage', {
         stories,
-        loggedIn: req.session.loggedIn
+        // loggedIn: req.session.loggedIn,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -62,48 +53,41 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-
-// RENDER A SINGLE POST
-router.get('/story/:id', (req, res) => {
+// RENDER A SINGLE STORY
+router.get('/:id', (req, res) => {
   Story.findOne({
-    where: {id: req.params.id},
+    where: {
+      id: req.params.id,
+    },
 
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'created_at'
-    ],
+    attributes: ['id', 'body', 'title', 'created_at'],
 
     include: [
       {
         model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User,
-          attributes: ['username']
-        }
+        attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
       },
-      {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+    ],
   })
-    .then(dbPostData => {
-      if(!dbPostData) {
-        res.status(404).json({message: 'No story found with this id'});
+    .then((dbStoryData) => {
+      if (!dbStoryData) {
+        res.status(404).json({ message: 'No story found with this id' });
         return;
       }
 
-      const post = dbPostData.get({plain: true});
+      const story = dbStoryData.get({ plain: true });
 
-      res.render('isolated-post', {
-        post,
-        loggedIn: req.session.loggedIn
+      res.render('single-story', {
+        story,
       });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });

@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { User, Story, Comment } = require('../../models');
+const { User, Story, Comment, Cover } = require('../../models');
 const withAuth = require('../../utils/with-auth');
-
 
 // GET STORY ROUTES ----------------------------------------------------------------------------------------------------------------------------
 
@@ -11,12 +10,7 @@ router.get('/', (req, res) => {
   Story.findAll({
     // NEWER STORY AT THE TOP OF PAGE
     order: [['created_at', 'DESC']],
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'created_at'
-    ],
+    attributes: ['id', 'body', 'title', 'created_at'],
     // PULL INFO FROM OTHER TABLES/MODELS
     include: [
       {
@@ -24,17 +18,26 @@ router.get('/', (req, res) => {
         attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ['username'],
+        },
       },
       {
-        model: User,
-        attributes: ['username']
-      }
-    ]
+        model: Cover,
+        attributes: [
+          'cover_color',
+          'title_color',
+          'font_size',
+          'font',
+          'border_size',
+          'border_color',
+        ],
+      },
+    ],
   })
-    .then(dbStoryData => res.json(dbStoryData))
-    .catch(err => {
+    .then((dbStoryData) => {
+      res.json(dbStoryData);
+    })
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -46,14 +49,9 @@ router.get('/:id', (req, res) => {
   // RUN FIND_ONE METHOD
   Story.findOne({
     where: {
-      id: req.params.id
+      id: req.params.id,
     },
-    attributes: [
-      'id',
-      'body',
-      'title',
-      'created_at'
-    ],
+    attributes: ['id', 'body', 'title', 'created_at'],
     // PULL DATA FROM COMMENT AND USER MODELS
     include: [
       {
@@ -61,23 +59,29 @@ router.get('/:id', (req, res) => {
         attributes: ['id', 'comment_text', 'story_id', 'user_id', 'created_at'],
         include: {
           model: User,
-          attributes: ['username']
-        }
+          attributes: ['username'],
+        },
       },
       {
         model: User,
-        attributes: ['username']
-      }
-    ]
+        attributes: ['username'],
+      },
+    ],
   })
-    .then(dbStoryData => {
+    .then((dbStoryData) => {
       if (!dbStoryData) {
         res.status(404).json({ message: 'No story found with this id' });
         return;
       }
+
       res.json(dbStoryData);
+      const story = dbStoryData.get({ plain: true });
+
+      res.render('story-info', {
+        story,
+      });
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -92,10 +96,10 @@ router.post('/', (req, res) => {
     user_id: req.session.user_id,
     title: req.body.title,
     body: req.body.body,
-    published: req.body.published
+    published: req.body.published,
   })
-    .then(dbStoryData => res.json(dbStoryData))
-    .catch(err => {
+    .then((dbStoryData) => res.json(dbStoryData))
+    .catch((err) => {
       res.status(500).json(err);
       console.log(err);
     });
@@ -106,17 +110,17 @@ router.delete('/:id', withAuth, (req, res) => {
   // RUN DESTROY FUNCTION USING INPUTTED ID
   Story.destroy({
     where: {
-      id: req.params.id
-    }
+      id: req.params.id,
+    },
   })
-    .then(dbStoryData => {
+    .then((dbStoryData) => {
       if (!dbStoryData) {
         res.status(404).json({ message: 'No story found with this id' });
         return;
       }
       res.json(dbStoryData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });
@@ -128,23 +132,23 @@ router.put('/:id', withAuth, (req, res) => {
     // ADD NEW/EDITED TITLE AND BODY
     {
       title: req.body.title,
-      body: req.body.body
+      body: req.body.body,
     },
     // USE INPUTTED ID
     {
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
+      },
     }
   )
-    .then(dbStoryData => {
+    .then((dbStoryData) => {
       if (!dbStoryData) {
         res.status(404).json({ message: 'No story found with this id' });
         return;
       }
       res.json(dbStoryData);
     })
-    .catch(err => {
+    .catch((err) => {
       console.log(err);
       res.status(500).json(err);
     });

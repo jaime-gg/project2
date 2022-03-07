@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
       },
     ],
   })
-    .then(dbCoverData => {
+    .then((dbCoverData) => {
       res.json(dbCoverData);
     })
     .catch((err) => {
