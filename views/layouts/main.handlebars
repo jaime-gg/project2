@@ -46,25 +46,23 @@
           <ul class="nav nav-pills nav-stacked">
             {{#if loggedIn}}
             <li class="nav-item">
+              <button id="logout" class="logout-btn">Logout</button>
+            </li>
+            <li class="nav-item">
               <a class="nav-link " href="/profile">Your Profile</a>
             </li>
-             {{else}}
-             {{/if}}
+            {{else}}
+            <li class="login">
+              <a href="/login">Login</a>
+            </li>
+            {{/if}}
+
             <li class="nav-item">
               <a class="nav-link" href="/authors">Explore Authors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/homepage">Explore Stories</a>
             </li>
-            {{#if loggedIn}}
-            <li class="log">
-                <a href="/logout">Logout</a>
-                </li>
-          {{else}}
-          <li class="log">
-              <a href="/login">Login</a>
-          </li>
-          {{/if}}
           </ul>
          
         </div>
@@ -76,8 +74,8 @@
     
     
 
-    {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
+  {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
   {{/if}}
   
   

@@ -84,6 +84,12 @@ a.nav-link {
   color: var(--quaternary);
 }
 
+.logout-btn {
+  border: none;
+  background: none;
+  
+}
+
 .log:hover {
   text-shadow: none;
 }
@@ -147,6 +153,8 @@ footer a:hover {
 form label {
   display: block;
 }
+
+
 
 /* LOGIN PAGE --------------------------------------------------------------------------- */
 
