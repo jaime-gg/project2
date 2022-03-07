@@ -6,7 +6,7 @@ const authorRoutes = require('./author-routes.js');
 
 
 router.use('/api', apiRoutes);
-router.use('/dashboard', dashboardRoutes);
+router.use('/profile', dashboardRoutes);
 router.use('/authors', authorRoutes);
 router.use('/', homepageRoutes);
 
