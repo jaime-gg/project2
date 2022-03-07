@@ -5,20 +5,6 @@ class Cover extends Model {}
 
 Cover.init(
   {
-    story_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'story',
-        key: 'id',
-      },
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
     cover_color: {
       type: DataTypes.INTEGER,
       allowNull: true,

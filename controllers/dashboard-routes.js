@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Story, User, Comment } = require('../models');
+const { Story, User, Comment, Cover } = require('../models');
 const withAuth = require('../utils/with-auth');
 
 // GET ALL OF YOUR STORIES
@@ -13,7 +13,6 @@ router.get('/', (req, res) => {
       'id',
       'body',
       'title',
-      'about_me',
       'created_at'
     ],
     include: [
