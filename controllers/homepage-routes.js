@@ -28,6 +28,7 @@ router.get('/', (req, res) => {
           attributes: ['username'],
         },
       },
+      { model: User, attributes: ['username, user_id'] },
     ],
   })
     .then((dbStoryData) => {
