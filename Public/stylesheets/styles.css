@@ -179,7 +179,7 @@ form label {
   border-radius: 5px;
 }
 
-.log-form {
+.login-form, .signup-form{
   display: flex;
   flex-flow: column;
   align-items: center;
