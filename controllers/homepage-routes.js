@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
       const stories = dbStoryData.map((story) => story.get({ plain: true }));
       res.render('homepage', {
         stories,
-        // loggedIn: req.session.loggedIn,
+        loggedIn: req.session.loggedIn,
       });
     })
     .catch((err) => {
@@ -100,6 +100,7 @@ router.get('/:id', (req, res) => {
 
       res.render('single-story', {
         story,
+        loggedIn: req.session.loggedIn
       });
     })
     .catch((err) => {
