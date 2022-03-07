@@ -45,7 +45,7 @@ router.get('/', (req, res) => {
   })
     .then(dbStoryData => {
       const stories = dbStoryData.map(story => story.get({ plain: true }));
-      res.render('dashboard', { stories, loggedIn: true });
+      res.render('profile', { stories, loggedIn: true });
     })
     .catch(err => {
       console.log(err);
