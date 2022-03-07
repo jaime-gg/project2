@@ -44,9 +44,12 @@
             </span>
           </div>
           <ul class="nav nav-pills nav-stacked">
+            {{#if loggedIn}}
             <li class="nav-item">
-              <a class="nav-link " href="/dashboard">Home</a>
+              <a class="nav-link " href="/dashboard">Your Profile</a>
             </li>
+             {{else}}
+             {{/if}}
             <li class="nav-item">
               <a class="nav-link" href="/authors">Explore Authors</a>
             </li>
