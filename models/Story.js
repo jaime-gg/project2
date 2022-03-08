@@ -33,7 +33,14 @@ Story.init(
         model: 'user',
         key: 'id'
       }
-    }
+    },
+    cover_id:{
+      type: DataTypes.INTEGER,
+      reference:{
+        model: 'cover',
+        key:'id'
+      }
+    },
   },
   {
     sequelize,

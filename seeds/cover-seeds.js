@@ -8,7 +8,8 @@ const coverdata = [
     font: 'Barrio',
     border_width: '5px' ,
     border_color: '#1B181D' ,
-    story_id: 1
+    story_id: 1,
+
   },
   {
     cover_color: '#238514',
@@ -17,7 +18,8 @@ const coverdata = [
     font: 'Homemade Apple',
     border_width: '5px' ,
     border_color: '#424044' ,
-    story_id: 2
+    story_id: 2,
+    
   },
   {
     cover_color: '#f21b3f',
