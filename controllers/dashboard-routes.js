@@ -73,6 +73,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
         res.render('edit-story', {
           story,
+          editStyles: true,
           loggedIn: true,
         });
       } else {
