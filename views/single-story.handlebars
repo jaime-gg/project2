@@ -1,1 +1,26 @@
-<div class="user-list">{{> story-info story}}</div>
+<div class="user-list">
+    {{> story-info story}}
+    <div>
+      <p class="post-body">{{body}}</p>
+    </div>
+
+</div>
+
+{{#if loggedIn}}
+<form class="comment-form">
+  <p class="form-label">Leave A Comment:</p>
+  <div>
+    <textarea class="form-input" name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button class="button" type="submit">add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments story.comments}}
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
