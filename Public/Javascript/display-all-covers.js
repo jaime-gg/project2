@@ -10,17 +10,17 @@ const coverGen = function (p) {
         for (let i = 1; i < dbStoryData.length; i++) {
           const c = dbStoryData[i];
           console.log(c);
-          // fill(c.cover.cover_color);
-          // stroke(c.cover.border_color);
-          // strokeWeight(c.cover.border_width);
-          // rect(0, 0, width, height);
-          // noStroke();
-          // textWrap(WORD);
-          // fill(c.cover.title_color);
-          // var titleSize = c.cover.font_size;
-          // textFont(c.cover.font);
-           text(c.title, 0, 0, width, height);
-          // textSize(titleSize);
+          fill(c.cover_color);
+          stroke(c.border_color);
+          strokeWeight(c.border_size);
+          rect(0, 0, width, height);
+          noStroke();
+          textWrap(WORD);
+          fill(c.title_color);
+          var titleSize = c.font_size;
+          textFont(c.font);
+          text(c.title, 0, 0, width, height);
+          textSize(titleSize);
         }
       });
   }

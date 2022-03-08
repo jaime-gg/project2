@@ -1,3 +1,10 @@
 <div class="user-list">{{> user-info user}}</div>
-<div class="story-list">{{> story-info story}}
-<div id="coversketch"></div></div>
+<div class="story-list">
+<ol class="user-list">
+  {{#each stories as |story|}}
+  <li>
+    {{> story-info story }}
+  </li>
+  {{/each}}
+</ol>
+</div>

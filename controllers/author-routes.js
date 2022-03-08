@@ -56,9 +56,10 @@ router.get('/:id', (req, res) => {
       }
 
       const user = dbUserData.get({ plain: true });
-
+      const story = dbUserData.story.get({ plain: true });
       res.render('single-user', {
         user,
+        story,
         loggedIn: req.session.loggedIn,
       });
     })
