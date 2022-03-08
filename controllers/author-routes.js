@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Story, Cover } = require('../models');
+const { User, Story } = require('../models');
 
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF All AUTHORS
 router.get('/', (req, res) => {
@@ -32,24 +32,19 @@ router.get('/:id', (req, res) => {
       id: req.params.id,
     },
     attributes: ['id', 'username', 'about_me', 'created_at'],
-
     include: [
       {
         model: Story,
-        attributes: ['id', 'title'],
-        include: [
-          {
-            model: Cover,
-            attributes: [
-              'id',
-              'cover_color',
-              'title_color',
-              'font_size',
-              'font',
-              'border_size',
-              'border_color',
-            ],
-          },
+        attributes: [
+          'id',
+          'title',
+          'body',
+          'cover_color',
+          'title_color',
+          'font_size',
+          'font',
+          'border_width',
+          'border_color',
         ],
       },
     ],

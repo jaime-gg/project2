@@ -12,7 +12,7 @@ const coverGen = function (p) {
           console.log(c);
           // fill(c.cover.cover_color);
           // stroke(c.cover.border_color);
-          // strokeWeight(c.cover.border_size);
+          // strokeWeight(c.cover.border_width);
           // rect(0, 0, width, height);
           // noStroke();
           // textWrap(WORD);
@@ -38,7 +38,7 @@ const coverGen = function (p) {
         font: tf,
         font_size: ts,
         border_color: bc,
-        border_size: bw,
+        border_width: bw,
       },
     });
   }

@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Story, Comment, Cover } = require('../../models');
+const { User, Story, Comment } = require('../../models');
 const withAuth = require('../../utils/with-auth');
 
 // GET STORY ROUTES ----------------------------------------------------------------------------------------------------------------------------
@@ -10,7 +10,18 @@ router.get('/', (req, res) => {
   Story.findAll({
     // NEWER STORY AT THE TOP OF PAGE
     order: [['created_at', 'DESC']],
-    attributes: ['id', 'body', 'title', 'created_at'],
+    attributes: [
+      'id',
+      'body',
+      'title',
+      'created_at',
+      'cover_color',
+      'title_color',
+      'font_size',
+      'font',
+      'border_width',
+      'border_color'
+    ],
     // PULL INFO FROM OTHER TABLES/MODELS
     include: [
       {
@@ -22,19 +33,9 @@ router.get('/', (req, res) => {
         },
       },
       {
-        model: Cover,
-        attributes: [
-          'cover_color',
-          'title_color',
-          'font_size',
-          'font',
-          'border_size',
-          'border_color',
-        ],
-      },
-      {
         model: User,
-        attributes: ['username', 'id'] },
+        attributes: ['username', 'id']
+      },
     ],
   })
     .then((dbStoryData) => {

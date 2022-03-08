@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Story, User, Comment, Cover } = require('../models');
+const { Story, User, Comment } = require('../models');
 const withAuth = require('../utils/with-auth');
 
 // GET ALL OF YOUR STORIES
@@ -9,16 +9,19 @@ router.get('/', (req, res) => {
       // CURRENT SESSION GIVES THE USER ID | GATHER ALL STORIES WITH THIS USER ID
       user_id: req.session.user_id,
     },
-<<<<<<< HEAD
     attributes: [
       'id',
       'body',
       'title',
-      'created_at'
+      'created_at',
+      'cover_color',
+      'title_color',
+      'font_size',
+      'font',
+      'border_width',
+      'border_color',
+
     ],
-=======
-    attributes: ['id', 'body', 'title', ' created_at'],
->>>>>>> bf9cf5c222bf4f09782de52bf24c8eab75d7a079
     include: [
       {
         model: Comment,
@@ -31,19 +34,7 @@ router.get('/', (req, res) => {
       {
         model: User,
         attributes: ['username'],
-      },
-      {
-        model: Cover,
-        attributes: [
-          'id',
-          'cover_color',
-          'title_color',
-          'font_size',
-          'font',
-          'border_size',
-          'border_color',
-        ],
-      },
+      }
     ],
   })
     .then((dbStoryData) => {

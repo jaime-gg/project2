@@ -21,10 +21,34 @@ Story.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    published: {
-      type: DataTypes.BOOLEAN,
+    // published: {
+    //   type: DataTypes.BOOLEAN,
+    //   allowNull: false,
+    //   defaultValue: false
+    // },
+    cover_color: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    title_color: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    font_size: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: false
+    },
+    font: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    border_color:{
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    border_width:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     // PULL DATA FROM USER MODEL | USER ID
     user_id: {
@@ -32,13 +56,6 @@ Story.init(
       references: {
         model: 'user',
         key: 'id'
-      }
-    },
-    cover_id:{
-      type: DataTypes.INTEGER,
-      reference:{
-        model: 'cover',
-        key:'id'
       }
     },
   },
