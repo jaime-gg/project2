@@ -1,0 +1,14 @@
+<article class='user'>
+  <div class='user-header'>
+
+    <h4><a class='username-link' href='/authors/{{id}}'>{{user.username}}</a></h4>
+    <p>Joined : {{format_date created_at}}</p>
+  </div>
+  <div class='user-body'>
+    <p> <span style="font-weight:600">{{stories.length}}</span> published stories.</p>
+
+    <p class='user-about'><span style="font-weight:600">A little about the author: </span><br>{{about_me}}</p>
+
+  </div>
+
+</article>
