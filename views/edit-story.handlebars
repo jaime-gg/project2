@@ -1,0 +1,23 @@
+<article>
+  <a href="/profile"> &larr; Back To Your Profile</a>
+  <div class="story">
+    <h2 class="story-header">
+      Edit Your Story 
+    </h2>
+    
+    <form class="edit-story-form story-body">
+      <label for="story-title" class="form-label">Title</label>
+      <input name="story-title" type="text" value="{{story.title}}" class="form-input title-input" />
+
+      <label class="form-label" for="story-body">Content</label>
+      <input name="story-body" type="text" value="{{story.body}}" class="form-input" />
+
+
+      <button class="button" type="submit">Save story</button>
+      <button class="button danger delete-story-btn"type="button">Delete Your Story</button>
+    </form>
+  </div>
+</article>
+
+<script src="/javascript/edit-story.js"></script>
+<script src="/javascript/delete-story.js"></script>
