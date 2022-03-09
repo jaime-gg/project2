@@ -1,8 +1,8 @@
 // instance mode p5 canvases
 // also know as name spacing
 
-const coverGen = function (p) {
-  const id = window.location.toString().split('/')[
+var coverGen = function (p) {
+  var id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
 
@@ -15,17 +15,17 @@ const coverGen = function (p) {
         console.log(dbStoryData);
         const c = dbStoryData;
         //  console.log(c);
-        fill(c.cover_color);
-        stroke(c.border_color);
-        strokeWeight(c.border_size);
-        rect(0, 0, width, height);
-        noStroke();
-        textWrap(WORD);
-        fill(c.title_color);
+        p.fill(c.cover_color);
+        p.stroke(c.border_color);
+        p.strokeWeight(c.border_size);
+        p.rect(0, 0, width, height);
+        p.noStroke();
+        p.textWrap(WORD);
+        p.fill(c.title_color);
         var titleSize = c.font_size;
-        textFont(c.font);
-        text(c.title, 0, 0, width, height);
-        textSize(titleSize);
+        p.textFont(c.font);
+        p.text(c.title, 0, 0, width, height);
+        p.textSize(titleSize);
       });
   }
 
@@ -52,7 +52,7 @@ const coverGen = function (p) {
     $('#coversketch').append(cnv);
     // cnv.parent('coversketch');
     cnv.style('z-index: 1');
-    fill(0);
+    p.fill(0);
     //fetchCover();
   };
 

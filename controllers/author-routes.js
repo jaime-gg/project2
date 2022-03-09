@@ -35,6 +35,7 @@ router.get('/:id', (req, res) => {
       'id',
       'title',
       'body',
+      'created_at',
       'cover_color',
       'title_color',
       'font_size',
