@@ -33,13 +33,13 @@ router.get('/', (req, res) => {
       },
       {
         model: User,
-        attributes: ['username'],
+        attributes: ['id', 'username', 'created_at'],
       }
     ],
   })
     .then((dbStoryData) => {
       const stories = dbStoryData.map((story) => story.get({ plain: true }));
-      res.render('profile', { stories, loggedIn: true });
+      res.render('profile', { stories, profileTrue: true, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);

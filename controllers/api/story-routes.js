@@ -81,7 +81,7 @@ router.get('/:id', (req, res) => {
       res.json(dbStoryData);
       const story = dbStoryData.get({ plain: true });
 
-      res.render('story-info', {
+      res.render('', {
         story,
       });
     })

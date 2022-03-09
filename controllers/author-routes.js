@@ -64,24 +64,24 @@ router.get('/:id', (req, res) => {
 });
 
 // ADD ROUTES THAT LOAD ENTIRE PAGE OF All AUTHORS
-router.get('/:id', (req, res) => {
-  User.findOne({
-    where: {
-      id: req.params.id,
-    },
-    attributes: ['id', 'username', 'about_me', 'created_at'],
-  })
-    .then((dbUserData) => {
-      const users = dbUserData.get({ plain: true });
-      // pass a single post object into the homepage template
-      res.render('user-info', {
-        users,
-      });
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
-});
+// router.get('/:id', (req, res) => {
+//   User.findOne({
+//     where: {
+//       id: req.params.id,
+//     },
+//     attributes: ['id', 'username', 'about_me', 'created_at'],
+//   })
+//     .then((dbUserData) => {
+//       const users = dbUserData.get({ plain: true });
+//       // pass a single post object into the homepage template
+//       res.render('user-info', {
+//         users,
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).json(err);
+//     });
+// });
 
 module.exports = router;

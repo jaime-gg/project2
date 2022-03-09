@@ -8,6 +8,10 @@
     <p> <span style="font-weight:600">{{stories.length}}</span> published stories.</p>
 
     <p class='user-about'><span style="font-weight:600">A little about the author: </span><br>{{about_me}}</p>
+    {{#if profileTrue}}
+      <a href="/about-me">Edit About Me</a> 
+    {{else}}
+    {{/if}}
 
   </div>
 
