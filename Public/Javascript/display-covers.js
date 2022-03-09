@@ -6,7 +6,7 @@ var coverGen = function (p) {
     window.location.toString().split('/').length - 1
   ];
 
-  //console.log(id);
+  console.log(id);
 
   function fetchCover() {
     fetch(`/api/stories/${id}`)
@@ -14,17 +14,17 @@ var coverGen = function (p) {
       .then((dbStoryData) => {
         console.log(dbStoryData);
         const c = dbStoryData;
-        //  console.log(c);
+         // console.log(c);
         p.fill(c.cover_color);
         p.stroke(c.border_color);
-        p.strokeWeight(c.border_size);
-        p.rect(0, 0, width, height);
+        p.strokeWeight(c.border_width);
+        p.rect(0, 0, p.width, p.height);
         p.noStroke();
-        p.textWrap(WORD);
+        p.textWrap(p.WORD);
         p.fill(c.title_color);
         var titleSize = c.font_size;
         p.textFont(c.font);
-        p.text(c.title, 0, 0, width, height);
+        p.text(c.title, p.width/2, p.height/2, p.width, p.height);
         p.textSize(titleSize);
       });
   }
@@ -52,8 +52,8 @@ var coverGen = function (p) {
     $('#coversketch').append(cnv);
     // cnv.parent('coversketch');
     cnv.style('z-index: 1');
-    p.fill(0);
-    //fetchCover();
+   // p.fill(0);
+    fetchCover();
   };
 
   // p.draw()=function(){
