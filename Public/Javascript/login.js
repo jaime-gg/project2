@@ -30,6 +30,12 @@ async function loginFormHandler(event) {
     const password = document.querySelector('#password-signup').value.trim();
     const title = "First Story"
     const body = "First Story body"
+    const cover_color = '#FFFFFF';
+    const title_color = '#F2F2F2';
+    const font_size = 15;
+    const font = 'Barrio';
+    const border_color = 55;
+    const border_width = '#F3F3F3';
   
     if (username && email && password) {
       const response = await fetch('/api/users', {
@@ -46,10 +52,18 @@ async function loginFormHandler(event) {
         method: 'post',
         body: JSON.stringify({
           title,
-          body
+          body,
+          cover_color,
+          title_color,
+          font_size,
+          font,
+          border_color,
+          border_width
         }),
         headers: { 'Content-Type': 'application/json' }
       });
+
+      console.log(response2)
   
       if (response.ok && response2.ok) {
         document.location.replace('/profile/');
