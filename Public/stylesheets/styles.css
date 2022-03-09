@@ -278,7 +278,7 @@ form label {
   /* flex-wrap: wrap; */
 }
 #coversketch{
-  flex: 1;
+  /* flex: 1; */
 }
 
 .author-info{
@@ -331,16 +331,7 @@ form label {
 .published{
   text-align: right;
 }
-/* comments ------------------------------- */
 
-.comments{
-  border: 12px outset var(--primary);
-}
-
-.comment{
-  background: light;
-  border-radius: 15px;
-}
 
 /* PROFILE PAGE AND STORY CREATION ---------------------- */
 .creation{
@@ -355,7 +346,7 @@ form label {
 
 .story-creation{
   flex:1;
-
+height:100%;
   border: 1px dashed red;
 
 }
@@ -381,6 +372,7 @@ textarea{
   width: 100%;
   margin-bottom: 10px;
   display: flex;
+
 }
 .cover-creation{
   flex:1;
@@ -388,14 +380,55 @@ align-items: center;
 border: 1px dashed green;
 }
 
-#sketch{
-
+.form-input{
+  height:100%;
 }
 
 #cover-inputs{
   display:flex;
   flex-flow:column;
 }
+
+.story-inputs{
+height:100%;
+}
+
+/* edit about me ------------------ */
+
+.about-me-editor{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.edit-about-me-form{
+  flex: 0 auto;
+  width:80vh;
+}
+.back{
+  flex: 0 auto;
+}
+
+/* comments ------------------------------- */
+
+.comments{
+  border: 12px outset var(--primary);
+}
+
+.comment{
+  background-color: var(--light);
+  border-radius: 15px;
+  margin: 2%;
+  padding: 1%;
+}
+
+.comment p{
+  font-size: 1.25rem;
+}
+
 /* MOBILE RESPONSIVENESS  ---------------------------------------------------------------------------------*/
 
 /* @media screen and (max-width: 300px) {
