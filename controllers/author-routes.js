@@ -63,11 +63,7 @@ router.get('/:id', (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-// ADD ROUTES THAT LOAD ENTIRE PAGE OF All AUTHORS
-=======
 // ADD ROUTES THAT LOAD ONE AUTHOR
->>>>>>> bf05b9291d2b747f4c58d33dc5078dba13fbac18
 // router.get('/:id', (req, res) => {
 //   User.findOne({
 //     where: {
@@ -78,11 +74,7 @@ router.get('/:id', (req, res) => {
 //     .then((dbUserData) => {
 //       const users = dbUserData.get({ plain: true });
 //       // pass a single post object into the homepage template
-<<<<<<< HEAD
-//       res.render('user-info', {
-=======
 //       res.render('single-user', {
->>>>>>> bf05b9291d2b747f4c58d33dc5078dba13fbac18
 //         users,
 //       });
 //     })
