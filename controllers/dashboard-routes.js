@@ -20,7 +20,6 @@ router.get('/', (req, res) => {
       'font',
       'border_width',
       'border_color',
-
     ],
     include: [
       {
@@ -34,17 +33,29 @@ router.get('/', (req, res) => {
       {
         model: User,
         attributes: ['id', 'about_me', 'username', 'created_at'],
-      }
+      },
     ],
   })
     .then((dbStoryData) => {
+      if (!dbStoryData) {
+        let story = {};
+      }
+
       const stories = dbStoryData.map((story) => story.get({ plain: true }));
       const user_id = stories[0].user.id;
       const username = stories[0].user.username;
       const about_me = stories[0].user.about_me;
       const created_at = stories[0].user.created_at;
 
-      res.render('profile', { stories, user_id, username, about_me, created_at, profileTrue: true, loggedIn: true });
+      res.render('profile', {
+        stories,
+        user_id,
+        username,
+        about_me,
+        created_at,
+        profileTrue: true,
+        loggedIn: true,
+      });
     })
     .catch((err) => {
       console.log(err);
@@ -89,7 +100,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
       res.status(500).json(err);
     });
 });
-
 
 // ALLOW USERS TO EDIT THEIR ABOUT ME | ONLY ALLOW WHEN LOGGED IN
 router.get('/about-me/:id', withAuth, (req, res) => {
