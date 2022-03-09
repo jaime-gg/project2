@@ -56,7 +56,7 @@ var coverGen = function (p) {
 
   // p5 function that only runs once and initialiazes the canvas
   p.setup = function () {
-    var cnv = p.createCanvas(250, 350);
+    var cnv = p.createCanvas((p.select('#grabbing-size').width / 2.2), (p.select('#grabbing-size').width / 2.1)*1.408);
     //$('.coversketch').append(cnv);
     cnv.parent('coversketch');
     cnv.style('z-index: 1');
@@ -70,7 +70,7 @@ var coverGen = function (p) {
 
   // resizes the canvas/cover everytime the window is resized according to half the width of the div below it
   p.windowResized = function () {
-    w = p.select('#grabbing-size').width / 2;
+    w = p.select('#grabbing-size').width / 2.2;
     p.resizeCanvas(w, w * 1.408);
   };
 };
