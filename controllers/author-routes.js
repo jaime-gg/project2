@@ -52,7 +52,6 @@ router.get('/:id', (req, res) => {
   })
     .then((dbUserData) => {
       const stories = dbUserData.map((user) => user.get({ plain: true }));
-      console.log(stories);
       const username = stories[0].user.username;
       const about_me = stories[0].user.about_me;
       const created_at = stories[0].user.created_at;

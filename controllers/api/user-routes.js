@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/with-auth');
 
 // GET USER ROUTES -----------------------------------------------------------------------------------------------------------------------------
 
@@ -79,6 +80,33 @@ router.post('/logout', (req, res) => {
   } else {
     res.status(404).end();
   }
+});
+
+// EDIT USER | LOGIN REQUIRED | /API/STORIES/:ID
+router.put('/:id', withAuth, (req, res) => {
+  User.update(
+    // ADD NEW/EDITED ABOUT ME
+    {
+      about_me: req.body.about_me,
+    },
+    // USE INPUTTED ID
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then((dbUserData) => {
+      if (!dbUserData) {
+        res.status(404).json({ message: 'No user found with this id' });
+        return;
+      }
+      res.json(dbUserData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 
