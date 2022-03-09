@@ -7,17 +7,17 @@ We will provide users with the ability to create accounts, login, privately stor
 
 ## Developers
 
-1. Autumn Barrios
+1. Dita Zanelli 
 
-2. Dita Zanelli 
+2. Jaime Gallegos Garcia 
 
-3. Jaime Gallegos Garcia 
+3. Autumn Barrios
 
 ## Installation Instructions
 
 - Launch via Horoku 
 
-- Clone reposatory, download dependencies, generate database using Schema.sql, seed the database with the provided seed files, and start the server using node. 
+- Clone repository, download dependencies, generate database using Schema.sql, seed the database with the provided seed files, and start the server using node. 
 
 
 ## Animated Gifs/Pictures of App
@@ -34,14 +34,17 @@ We will provide users with the ability to create accounts, login, privately stor
 
 ## APIs
 
--
+- N/A
 
 ## MVP (Minimum Viable Product)
 
-- An application that allows users to login and logout. Store written content privately with the option to publish their works. There will be the option for logged in users to leave comments and bookmark points in their readings. There will be 3 main featured pages, a homepage for looking through all published works that includes a search feature for book titles and authors, a page for viewing another authors page, a dashboard for writing stories, publishing, and generating book covers, as well as a login/logout page. 
+- An application that allows users to login and logout. Store written content as publish stories. There will be the option for logged in users to leave comments. There will be 4 main featured pages, a homepage for looking through all published works, a page for viewing another authors page, a profile for writing stories and generating book covers, as well as a login/logout page. 
 
 
 ## Stretch Goals
 
 - The ability to save and browse using chapters. 
 - A more intuitive book cover generator. 
+- Search functionality 
+- Reply to other comments
+- Fix disconnect between cover and story creations. 

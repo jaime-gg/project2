@@ -347,7 +347,6 @@ form label {
 .story-creation{
   flex:1;
 height:100%;
-  border: 1px dashed red;
 
 }
 
@@ -376,8 +375,7 @@ textarea{
 }
 .cover-creation{
   flex:1;
-align-items: center;
-border: 1px dashed green;
+  align-items: center;
 }
 
 .form-input{

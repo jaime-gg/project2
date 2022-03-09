@@ -207,75 +207,7 @@ const storydata = [
     border_width: 25,
     border_color: '#1B181D',
     user_id: 5,
-  },
-  {
-    title:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam.',
-    body: ` Praesent non feugiat turpis, vitae accumsan est. Vestibulum posuere magna sed eros blandit cursus. Quisque diam ipsum, finibus eget orci sit amet, sollicitudin lobortis magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at vestibulum sapien. Nullam pulvinar luctus tortor. Maecenas convallis orci a libero vehicula, vel elementum nulla molestie. Sed nec eros ac libero dignissim vulputate. Donec tincidunt, risus ut ultricies efficitur, elit ipsum lacinia est, vel vehicula massa nisl nec lacus. Pellentesque semper vulputate pulvinar. Morbi eu pretium ante. Vivamus dignissim nisl dui. 
-            Nullam justo metus, blandit ac elit eget, condimentum pulvinar eros. Vestibulum in sapien ut nulla hendrerit cursus. Vivamus laoreet, erat sed congue blandit, est dui viverra libero, ac consequat odio sem eget leo. Vivamus eu porta tortor. Integer in diam lorem. Cras vitae ornare elit. Curabitur cursus ullamcorper dolor, in varius nibh ullamcorper ac. Sed eu semper lacus. Pellentesque gravida dictum porta. Ut pharetra tortor mauris, id venenatis massa ultrices ac. In consectetur elit arcu, ut suscipit magna lacinia vel. 
-            Sed venenatis in augue eu pharetra. Proin sit amet efficitur justo. Praesent dignissim tortor neque, ac accumsan eros laoreet sit amet. Sed semper, sapien vitae feugiat pellentesque, nunc ligula lobortis magna, at vulputate velit nisl ornare metus. Integer quis nunc hendrerit, suscipit arcu a, pellentesque risus. Maecenas sit amet orci augue. Mauris ante nisl, auctor sed dapibus vel, viverra nec nibh. Mauris pharetra arcu in nisi scelerisque, id tempor ex lobortis.`,
-    cover_color: '#238514',
-    title_color: '#ffffff',
-    font_size: 15,
-    font: 'UnifrakturCook',
-    border_width: 45,
-    border_color: '#424044',
-    user_id: 4,
-  },
-  {
-    title: 'In hac habitasse platea dictumst.',
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue semper neque tempus faucibus. Vestibulum lorem turpis, vulputate at ullamcorper nec, scelerisque non erat. Quisque nunc ligula, vestibulum ut purus a, volutpat mattis libero. Curabitur faucibus lobortis erat ut consectetur. Maecenas auctor turpis enim, vitae consectetur ante eleifend nec. Sed imperdiet ultricies felis. Mauris ultricies dui eget placerat volutpat. Nam tempus, magna tincidunt laoreet molestie, massa augue hendrerit neque, sit amet accumsan arcu diam eu justo. Donec libero est, ultrices sed justo id, vestibulum scelerisque ipsum. Cras cursus, erat in finibus suscipit, nunc enim egestas elit, non finibus nunc metus non felis. Curabitur faucibus libero mi, et ullamcorper eros convallis in. In interdum sit amet diam ac scelerisque. Nulla iaculis varius augue eget sollicitudin. Sed condimentum nisi eleifend, mattis mauris vel, rutrum magna. Phasellus tristique, ligula eu fermentum fermentum, risus erat accumsan ex, scelerisque interdum libero lectus semper nibh. Cras vel diam luctus, malesuada lectus non, rutrum tortor. 
-            Aliquam ac enim aliquam, finibus dui ac, varius ligula. Cras hendrerit sapien vitae euismod tristique. Ut viverra ullamcorper turpis eget mattis. Ut finibus leo sed auctor varius. In hac habitasse platea dictumst. Nunc tempus magna vel ex consectetur finibus. Nulla commodo ultricies dui ut tempus. Morbi tincidunt, purus eu elementum dapibus, ante metus pellentesque dolor, a cursus est elit eu enim. 
-            Praesent non feugiat turpis, vitae accumsan est. Vestibulum posuere magna sed eros blandit cursus. Quisque diam ipsum, finibus eget orci sit amet, sollicitudin lobortis magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at vestibulum sapien. Nullam pulvinar luctus tortor. Maecenas convallis orci a libero vehicula, vel elementum nulla molestie. Sed nec eros ac libero dignissim vulputate. Donec tincidunt, risus ut ultricies efficitur, elit ipsum lacinia est, vel vehicula massa nisl nec lacus. Pellentesque semper vulputate pulvinar. Morbi eu pretium ante. Vivamus dignissim nisl dui. 
-            Nullam justo metus, blandit ac elit eget, condimentum pulvinar eros. Vestibulum in sapien ut nulla hendrerit cursus. Vivamus laoreet, erat sed congue blandit, est dui viverra libero, ac consequat odio sem eget leo. Vivamus eu porta tortor. Integer in diam lorem. Cras vitae ornare elit. Curabitur cursus ullamcorper dolor, in varius nibh ullamcorper ac. Sed eu semper lacus. Pellentesque gravida dictum porta. Ut pharetra tortor mauris, id venenatis massa ultrices ac. In consectetur elit arcu, ut suscipit magna lacinia vel. 
-            Sed venenatis in augue eu pharetra. Proin sit amet efficitur justo. Praesent dignissim tortor neque, ac accumsan eros laoreet sit amet. Sed semper, sapien vitae feugiat pellentesque, nunc ligula lobortis magna, at vulputate velit nisl ornare metus. Integer quis nunc hendrerit, suscipit arcu a, pellentesque risus. Maecenas sit amet orci augue. Mauris ante nisl, auctor sed dapibus vel, viverra nec nibh. Mauris pharetra arcu in nisi scelerisque, id tempor ex lobortis.`,
-    cover_color: '#f21b3f',
-    title_color: '#ffffff',
-    font_size: 15,
-    font: 'Barrio',
-    border_width: 5,
-    border_color: '#1B181D',
-    user_id: 3,
-  },
-  {
-    title: 'Etiam justo.',
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue semper neque tempus faucibus. Vestibulum lorem turpis, vulputate at ullamcorper nec, scelerisque non erat. Quisque nunc ligula, vestibulum ut purus a, volutpat mattis libero. Curabitur faucibus lobortis erat ut consectetur. Maecenas auctor turpis enim, vitae consectetur ante eleifend nec. Sed imperdiet ultricies felis. Mauris ultricies dui eget placerat volutpat. Nam tempus, magna tincidunt laoreet molestie, massa augue hendrerit neque, sit amet accumsan arcu diam eu justo. Donec libero est, ultrices sed justo id, vestibulum scelerisque ipsum. Cras cursus, erat in finibus suscipit, nunc enim egestas elit, non finibus nunc metus non felis. Curabitur faucibus libero mi, et ullamcorper eros convallis in. In interdum sit amet diam ac scelerisque. Nulla iaculis varius augue eget sollicitudin. Sed condimentum nisi eleifend, mattis mauris vel, rutrum magna. Phasellus tristique, ligula eu fermentum fermentum, risus erat accumsan ex, scelerisque interdum libero lectus semper nibh. Cras vel diam luctus, malesuada lectus non, rutrum tortor. 
-            Aliquam ac enim aliquam, finibus dui ac, varius ligula. Cras hendrerit sapien vitae euismod tristique. Ut viverra ullamcorper turpis eget mattis. Ut finibus leo sed auctor varius. In hac habitasse platea dictumst. Nunc tempus magna vel ex consectetur finibus. Nulla commodo ultricies dui ut tempus. Morbi tincidunt, purus eu elementum dapibus, ante metus pellentesque dolor, a cursus est elit eu enim. 
-            Sed venenatis in augue eu pharetra. Proin sit amet efficitur justo. Praesent dignissim tortor neque, ac accumsan eros laoreet sit amet. Sed semper, sapien vitae feugiat pellentesque, nunc ligula lobortis magna, at vulputate velit nisl ornare metus. Integer quis nunc hendrerit, suscipit arcu a, pellentesque risus. Maecenas sit amet orci augue. Mauris ante nisl, auctor sed dapibus vel, viverra nec nibh. Mauris pharetra arcu in nisi scelerisque, id tempor ex lobortis.`,
-    cover_color: '#f21b3f',
-    title_color: '#ffffff',
-    font_size: 15,
-    font: 'Barrio',
-    border_width: 35,
-    border_color: '#1B181D',
-    user_id: 2,
-  },
-  {
-    title: 'Nulla ut erat id mauris vulputate elementum.',
-    body: ` Praesent non feugiat turpis, vitae accumsan est. Vestibulum posuere magna sed eros blandit cursus. Quisque diam ipsum, finibus eget orci sit amet, sollicitudin lobortis magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at vestibulum sapien. Nullam pulvinar luctus tortor. Maecenas convallis orci a libero vehicula, vel elementum nulla molestie. Sed nec eros ac libero dignissim vulputate. Donec tincidunt, risus ut ultricies efficitur, elit ipsum lacinia est, vel vehicula massa nisl nec lacus. Pellentesque semper vulputate pulvinar. Morbi eu pretium ante. Vivamus dignissim nisl dui. 
-            Nullam justo metus, blandit ac elit eget, condimentum pulvinar eros. Vestibulum in sapien ut nulla hendrerit cursus. Vivamus laoreet, erat sed congue blandit, est dui viverra libero, ac consequat odio sem eget leo. Vivamus eu porta tortor. Integer in diam lorem. Cras vitae ornare elit. Curabitur cursus ullamcorper dolor, in varius nibh ullamcorper ac. Sed eu semper lacus. Pellentesque gravida dictum porta. Ut pharetra tortor mauris, id venenatis massa ultrices ac. In consectetur elit arcu, ut suscipit magna lacinia vel. 
-            Sed venenatis in augue eu pharetra. Proin sit amet efficitur justo. Praesent dignissim tortor neque, ac accumsan eros laoreet sit amet. Sed semper, sapien vitae feugiat pellentesque, nunc ligula lobortis magna, at vulputate velit nisl ornare metus. Integer quis nunc hendrerit, suscipit arcu a, pellentesque risus. Maecenas sit amet orci augue. Mauris ante nisl, auctor sed dapibus vel, viverra nec nibh. Mauris pharetra arcu in nisi scelerisque, id tempor ex lobortis.`,
-    user_id: '1',
-    cover_color: '#f21b3f',
-    title_color: '#ffffff',
-    font_size: 15,
-    font: 'Barrio',
-    border_width: 55,
-    border_color: '#1B181D',
-  },
-  {
-    title:
-      'Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.',
-    body: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue semper neque tempus faucibus. Vestibulum lorem turpis, vulputate at ullamcorper nec, scelerisque non erat. Quisque nunc ligula, vestibulum ut purus a, volutpat mattis libero. Curabitur faucibus lobortis erat ut consectetur. Maecenas auctor turpis enim, vitae consectetur ante eleifend nec. Sed imperdiet ultricies felis. Mauris ultricies dui eget placerat volutpat. Nam tempus, magna tincidunt laoreet molestie, massa augue hendrerit neque, sit amet accumsan arcu diam eu justo. Donec libero est, ultrices sed justo id, vestibulum scelerisque ipsum. Cras cursus, erat in finibus suscipit, nunc enim egestas elit, non finibus nunc metus non felis. Curabitur faucibus libero mi, et ullamcorper eros convallis in. In interdum sit amet diam ac scelerisque. Nulla iaculis varius augue eget sollicitudin. Sed condimentum nisi eleifend, mattis mauris vel, rutrum magna. Phasellus tristique, ligula eu fermentum fermentum, risus erat accumsan ex, scelerisque interdum libero lectus semper nibh. Cras vel diam luctus, malesuada lectus non, rutrum tortor. 
-            Sed venenatis in augue eu pharetra. Proin sit amet efficitur justo. Praesent dignissim tortor neque, ac accumsan eros laoreet sit amet. Sed semper, sapien vitae feugiat pellentesque, nunc ligula lobortis magna, at vulputate velit nisl ornare metus. Integer quis nunc hendrerit, suscipit arcu a, pellentesque risus. Maecenas sit amet orci augue. Mauris ante nisl, auctor sed dapibus vel, viverra nec nibh. Mauris pharetra arcu in nisi scelerisque, id tempor ex lobortis.`,
-    cover_color: '#8624B0',
-    title_color: '#ffffff',
-    font_size: 15,
-    font: 'Barrio',
-    border_width: 5,
-    border_color: '#1B181D',
-    user_id: 10,
-  },
+  }
 ];
 
 const seedStories = () => Story.bulkCreate(storydata);
