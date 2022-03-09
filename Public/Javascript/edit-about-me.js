@@ -1,8 +1,7 @@
 async function editAboutMeHandler(event) {
     event.preventDefault();
   
-    const title = document.querySelector('input[name="story-title"]').value.trim();
-    const body = document.querySelector('input[name="story-body"]').value.trim();
+    const about_me = document.querySelector('input[name="about"]').value.trim();
     const id = window.location.toString().split('/')[
       window.location.toString().split('/').length - 1
     ];

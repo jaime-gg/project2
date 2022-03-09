@@ -85,4 +85,28 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
+
+// ALLOW USERS TO EDIT THEIR ABOUT ME | ONLY ALLOW WHEN LOGGED IN
+router.get('/edit/:id', withAuth, (req, res) => {
+  // FIND BY PRIMARY KEY
+  User.findByPk(req.params.id, {
+    attributes: ['id', 'about_me', 'created_at'],
+  })
+    .then((dbUserData) => {
+      if (dbUserData) {
+        const story = dbStoryData.get({ plain: true });
+
+        res.render('edit-about', {
+          story,
+          loggedIn: true,
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
 module.exports = router;
