@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
       'font_size',
       'font',
       'border_width',
-      'border_color'
+      'border_color',
     ],
     // PULL INFO FROM OTHER TABLES/MODELS
     include: [
@@ -34,7 +34,7 @@ router.get('/', (req, res) => {
       },
       {
         model: User,
-        attributes: ['username', 'id']
+        attributes: ['username', 'id'],
       },
     ],
   })
@@ -55,7 +55,18 @@ router.get('/:id', (req, res) => {
     where: {
       id: req.params.id,
     },
-    attributes: ['id', 'body', 'title', 'created_at'],
+    attributes: [
+      'id',
+      'body',
+      'title',
+      'created_at',
+      'cover_color',
+      'title_color',
+      'font_size',
+      'font',
+      'border_width',
+      'border_color',
+    ],
     // PULL DATA FROM COMMENT AND USER MODELS
     include: [
       {
@@ -79,11 +90,11 @@ router.get('/:id', (req, res) => {
       }
 
       res.json(dbStoryData);
-      const story = dbStoryData.get({ plain: true });
+      // const story = dbStoryData.get({ plain: true });
 
-      res.render('', {
-        story,
-      });
+      // res.render('single-story', {
+      //   story,
+      // });
     })
     .catch((err) => {
       console.log(err);
