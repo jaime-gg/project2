@@ -32,7 +32,7 @@ h1 {
 }
 a {
   text-decoration: none;
-  color: var(--light);
+  color: var(--quaternary);
   transition: color 0.1s;
 }
 
@@ -69,6 +69,7 @@ a:hover {
   height: 100vh;
   font-weight: 600;
   font-size: 100%;
+  border-right: 12px double var(--light);
 }
 .nav {
   margin: 7%;
@@ -155,7 +156,6 @@ form label {
 }
 
 
-
 /* LOGIN PAGE --------------------------------------------------------------------------- */
 
 .login-pg {
@@ -236,13 +236,14 @@ form label {
   display: flex;
   flex-direction: column;
   gap: 20px 30px;
-  padding: 20px;
+  padding: 7% 7% 0 7% ;
   justify-content: space-around;
 }
 
 .user {
   background-color: var(--secondary);
   border-radius: 10px;
+ border: 12px outset var(--primary);
 }
 
 .username-link {
@@ -260,7 +261,30 @@ form label {
 .user-body {
   padding: 10px;
 }
-/* view stories */
+
+/* view stories -------------------------------------------------------------------------------*/
+.story{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+
+.main-story-info{
+  display: flex;
+  flex-flow: column;
+  justify-content:  flex-start;
+  /* gap: 10px; */
+  /* flex-wrap: wrap; */
+}
+#coversketch{
+  /* flex: 1; */
+}
+
+.author-info{
+  flex:1;
+}
+
 .story-list {
   list-style: none;
   display: flex;
@@ -292,7 +316,118 @@ form label {
   padding: 0px 10px;
 }
 
+ .user >p {
+  color: var(--quaternary);
+  font-weight: 600;
+  margin: 10px;
+}
 
+.story-text{
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  border: 12px outset var(--primary);
+}
+.published{
+  text-align: right;
+}
+
+
+/* PROFILE PAGE AND STORY CREATION ---------------------- */
+.creation{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px 20px;
+  padding: 10px;
+  flex-wrap:wrap;
+ 
+}
+
+.story-creation{
+  flex:1;
+height:100%;
+  border: 1px dashed red;
+
+}
+
+.new-story-form{
+height:100%;
+}
+
+.story-body-input{
+ height: 100%;
+}
+
+textarea{
+  width:100%;
+  height:100%;
+}
+
+.form_input{
+  width: 100%;
+  flex: 1;
+}
+.title_input{
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+
+}
+.cover-creation{
+  flex:1;
+align-items: center;
+border: 1px dashed green;
+}
+
+.form-input{
+  height:100%;
+}
+
+#cover-inputs{
+  display:flex;
+  flex-flow:column;
+}
+
+.story-inputs{
+height:100%;
+}
+
+/* edit about me ------------------ */
+
+.about-me-editor{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px 20px;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.edit-about-me-form{
+  flex: 0 auto;
+  width:80vh;
+}
+.back{
+  flex: 0 auto;
+}
+
+/* comments ------------------------------- */
+
+.comments{
+  border: 12px outset var(--primary);
+}
+
+.comment{
+  background-color: var(--light);
+  border-radius: 15px;
+  margin: 2%;
+  padding: 1%;
+}
+
+.comment p{
+  font-size: 1.25rem;
+}
 
 /* MOBILE RESPONSIVENESS  ---------------------------------------------------------------------------------*/
 

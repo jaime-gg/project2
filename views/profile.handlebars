@@ -1,31 +1,44 @@
-{{> user-info user}}
+<div id ="grabbing-size" class="user-list">{{> user-info this}}
+<a href="/profile/about-me/{{user_id}}">Edit About Me</a> 
 
-<section class="story">
-  <h2 class="story-header">Publish A New Story</h2>
+<script src="/javascript/cover.js"></script>
+<section class="user publish">
+  <h4 class="story-creation-header">Publish A New Story</h4>
 
-  <form class="new-story-form story-body">
-    <div>
+  <div class="creation "><div class="cover-creation" ><div id="sketch"></div><div id="cover-inputs"></div></div>
+
+<div class="story-creation story-inputs">
+
+  <form class="new-story-form ">
+    <div class="title-input">
       <label class ="form-label" for="story-title">Title</label>
-      <input class="form-input title-input" type="text" id="story-title" name="story-title" />
+      <input class="form-input " type="text" id="story-title" name="story-title" />
     </div>
-    <div>
+    <div class="story-body-input">
       <label class ="form-label" for="story-body">Content</label>
-      <input class="form-input" id="story-body" name="story-body" />
+      <textarea class="form-input" id="story-body" name="story-body" ></textarea>
     </div>
     <button type="submit" class="button">Create</button>
   </form>
+
+  </div>
+
+  </div>
 </section>
+
 
 {{#if stories.length}}
 <section>
-  <h2>Your Stories</h2>
+  <h2>Your Stories :</h2>
   <ol class="story-list">
     {{#each stories as |story|}}
     <li>
       {{> story-info story}}
-      <a href="/dashboard/edit/{{story.id}}" class="edit-link">Edit Story</a>
+      <a href="/profile/edit/{{story.id}}" class="edit-link">Edit Story</a>
     </li>
     {{/each}}
   </ol>
 </section>
 {{/if}}
+</div>
+<script src="/javascript/new-story.js"></script>

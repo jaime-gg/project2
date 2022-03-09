@@ -36,19 +36,19 @@ Story.init(
     },
     font_size: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     font: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     border_color:{
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     border_width:{
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     // PULL DATA FROM USER MODEL | USER ID
     user_id: {

@@ -19,14 +19,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     {{!-- <script src="../javascript/display-all-covers.js"></script> --}}
+    {{#if editStyles}}
+    <link rel="stylesheet" href="../../stylesheets/styles.css" />
+    {{else}}
     <link rel="stylesheet" href="../stylesheets/styles.css" />
+    {{/if}}
     <title>StoreEZ</title>
   </head>
 
   <body>
     <!-- top of pg -->
     <header>
+      
+        {{#if editStyles}}
+        <img src="../../assets/storeEZ_2.svg" class="logo">
+        {{else}}
         <img src="../assets/storeEZ_2.svg" class="logo">
+        {{/if}}
+        
         <p>self publishing made easy.</p>
      
     </header>
@@ -61,7 +71,7 @@
               <a class="nav-link" href="/authors">Explore Authors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/homepage">Explore Stories</a>
+              <a class="nav-link" href="/">Explore Stories</a>
             </li>
           </ul>
          

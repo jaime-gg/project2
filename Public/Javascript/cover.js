@@ -2,88 +2,73 @@
 
 let coverColor;
 let textColor;
-let textfield;
 let borderWSlider;
 let borderColor;
 let textSlider;
 let titleSize;
-let gradientCol;
 let fontMenu;
+let w;
 var Canvas;
 
 function setup() {
-  Canvas = createCanvas(250, 350);
-  Canvas.parent('canvas-div');
+  Canvas = createCanvas(
+    select('#grabbing-size').width / 2.5,
+    (select('#grabbing-size').width / 2.5) * 1.408
+  );
+  Canvas.parent('sketch');
+  //$('.canvas').append(Canvas);
   coverInputs();
-// var config
+  // var config
 }
 
 function draw() {
-
+  let title;
+  title = select('#story-title').value();
   background(coverColor.color());
   stroke(borderColor.value());
   strokeWeight(borderWSlider.value());
   fill(coverColor.color());
-  rect(0,0,width, height);
+  rect(0, 0, width, height);
   noStroke();
   // gradientBG();
-textWrap(WORD);
+  textWrap(WORD);
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(fontMenu.value());
-  text(textfield.value(), 0, 0, width, height);
+  textAlign(CENTER, CENTER);
+  text(title, 0, 0, width, height);
   textSize(textSlider.value());
 }
 
+function windowResized() {
+  w = select('#grabbing-size').width / 2.5;
+  resizeCanvas(w, w * 1.408);
+}
+
 function coverInputs() {
-  coverColor = createColorPicker('#ed225d');
-  coverColor.parent('canvas-div');
+  coverColor = createColorPicker('#FFFFFF');
+  coverColor.parent('cover-inputs');
   textColor = createColorPicker('#000');
-  textColor.parent('canvas-div');
+  textColor.parent('cover-inputs');
   borderColor = createColorPicker('#000');
-  borderColor.parent('canvas-div');
+  borderColor.parent('cover-inputs');
 
   fontMenu = createSelect();
   fontMenu.option('Barrio');
   fontMenu.option('Codystar');
   fontMenu.option('Homemade Apple');
   fontMenu.option('IM Fell English SC');
-  fontMenu.option('Libre Barcode 128 Text');
   fontMenu.option('Turret Road');
   fontMenu.option('UnifrakturCook');
-  fontMenu.parent('canvas-div');
+  fontMenu.parent('cover-inputs');
 
   textSlider = createSlider(10, 100, 30);
   textSlider.style('width', '80px');
-  textSlider.parent('canvas-div');
+  textSlider.parent('cover-inputs');
 
   borderWSlider = createSlider(0, 100, 30);
   borderWSlider.style('width', '80px');
-  borderWSlider.parent('canvas-div');
-
-  textAlign(CENTER, CENTER);
-  textfield = select('#title');
-  button = createButton('save');
-  button.parent('canvas-div');
+  borderWSlider.parent('cover-inputs');
 }
-
-function gradientBG() {
-  noStroke();
-  for (var x = 0; x < width; x += 10) {
-    for (var y = 0; y < height; y += 10) {
-      var c = 255 * noise(0.003 * x, 0.003 * y);
-      fill(gradientCol.color.R, gradientCol.color.G, gradientCol.color.B, c);
-      rect(x, y, 10, 10);
-    }
-  }
-}
-
-// function uploadCover() {
-//   var ref= database.ref('covers');
-//   var data= {
-
-// };
-// ref.push(cover);
-// }
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed

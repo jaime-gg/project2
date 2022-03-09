@@ -33,13 +33,18 @@ router.get('/', (req, res) => {
       },
       {
         model: User,
-        attributes: ['username'],
+        attributes: ['id', 'about_me', 'username', 'created_at'],
       }
     ],
   })
     .then((dbStoryData) => {
       const stories = dbStoryData.map((story) => story.get({ plain: true }));
-      res.render('profile', { stories, loggedIn: true });
+      const user_id = stories[0].user.id;
+      const username = stories[0].user.username;
+      const about_me = stories[0].user.about_me;
+      const created_at = stories[0].user.created_at;
+
+      res.render('profile', { stories, user_id, username, about_me, created_at, profileTrue: true, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
@@ -73,6 +78,32 @@ router.get('/edit/:id', withAuth, (req, res) => {
 
         res.render('edit-story', {
           story,
+          editStyles: true,
+          loggedIn: true,
+        });
+      } else {
+        res.status(404).end();
+      }
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+
+// ALLOW USERS TO EDIT THEIR ABOUT ME | ONLY ALLOW WHEN LOGGED IN
+router.get('/about-me/:id', withAuth, (req, res) => {
+  // FIND BY PRIMARY KEY
+  User.findByPk(req.params.id, {
+    attributes: ['id', 'about_me', 'created_at'],
+  })
+    .then((dbUserData) => {
+      if (dbUserData) {
+        const story = dbUserData.get({ plain: true });
+
+        res.render('edit-about', {
+          story,
+          editStyles: true,
           loggedIn: true,
         });
       } else {
