@@ -17,7 +17,7 @@ var coverGen = function (p) {
     fetch(`/api/stories/${id}`)
       .then((response) => response.json())
       .then((dbStoryData) => {
-        //console.log(dbStoryData);
+        console.log(dbStoryData);
         const c = dbStoryData;
         // console.log(c);
         // c.cover_color
