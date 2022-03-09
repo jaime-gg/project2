@@ -1,16 +1,16 @@
-<article>
+<article class="about-me-editor">
   <a href="/profile"> &larr; Back To Your Profile</a>
-  <div class="story">
-    <h2 class="story-header">
+  <div class="user">
+    <h4 class="story-header">
       Edit Your Story 
-    </h2>
+    </h4>
     
-    <form class="edit-story-form story-body">
+    <form class="edit-about-form story-body">
       <label for="story-title" class="form-label">Title</label>
       <input name="story-title" type="text" value="{{story.title}}" class="form-input title-input" />
 
       <label class="form-label" for="story-body">Content</label>
-      <input name="story-body" type="text" value="{{story.body}}" class="form-input" />
+      <textarea name="story-body" type="text" value="{{story.body}}" class="form-input" ></textarea>
 
 
       <button class="button" type="submit">Save story</button>

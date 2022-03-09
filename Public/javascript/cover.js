@@ -48,10 +48,13 @@ function windowResized() {
 function coverInputs() {
   coverColor = createColorPicker('#FFFFFF');
   coverColor.parent('cover-inputs');
+  coverColor.id('coverColor');
   textColor = createColorPicker('#000');
   textColor.parent('cover-inputs');
+  textColor.id('textColor');
   borderColor = createColorPicker('#000');
   borderColor.parent('cover-inputs');
+  borderColor.id('borderColor');
 
   fontMenu = createSelect();
   fontMenu.option('Barrio');
@@ -61,14 +64,17 @@ function coverInputs() {
   fontMenu.option('Turret Road');
   fontMenu.option('UnifrakturCook');
   fontMenu.parent('cover-inputs');
+  fontMenu.id('fontMenu');
 
   textSlider = createSlider(10, 100, 30);
   textSlider.style('width', '80px');
   textSlider.parent('cover-inputs');
+  textSlider.id('textSlider');
 
   borderWSlider = createSlider(0, 100, 30);
   borderWSlider.style('width', '80px');
   borderWSlider.parent('cover-inputs');
+  borderWSlider.id('borderWSlider');
 }
 
 //capture the users bg color #, text color #, text size, and text content when save button is pressed
