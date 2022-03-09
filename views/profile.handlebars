@@ -1,5 +1,6 @@
 {{> user-info user}}
 
+<script src="/javascript/cover.js"></script>
 <section class="story">
   <h2 class="story-header">Publish A New Story</h2>
 
@@ -11,9 +12,12 @@
     <div>
       <label class ="form-label" for="story-body">Content</label>
       <input class="form-input" id="story-body" name="story-body" />
+      
     </div>
-    <button type="submit" class="button">Create</button>
+    <button type="submit" class="button">Create</button><div class="canvas"></div>
+    
   </form>
+  
 </section>
 
 {{#if stories.length}}

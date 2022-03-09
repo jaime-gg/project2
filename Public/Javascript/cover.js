@@ -13,21 +13,21 @@ var Canvas;
 
 function setup() {
   Canvas = createCanvas(250, 350);
-  Canvas.parent('canvas-div');
+  //Canvas.parent('sketch');
+  $('.canvas').append(Canvas);
   coverInputs();
-// var config
+  // var config
 }
 
 function draw() {
-
   background(coverColor.color());
   stroke(borderColor.value());
   strokeWeight(borderWSlider.value());
   fill(coverColor.color());
-  rect(0,0,width, height);
+  rect(0, 0, width, height);
   noStroke();
   // gradientBG();
-textWrap(WORD);
+  textWrap(WORD);
   fill(textColor.color());
   titleSize = textSlider.value();
   textFont(fontMenu.value());
@@ -37,34 +37,31 @@ textWrap(WORD);
 
 function coverInputs() {
   coverColor = createColorPicker('#ed225d');
-  coverColor.parent('canvas-div');
+  $('.canvas').append.coverColor;
   textColor = createColorPicker('#000');
-  textColor.parent('canvas-div');
+  $('.canvas').append.textColor;
   borderColor = createColorPicker('#000');
-  borderColor.parent('canvas-div');
+  $('.canvas').append.borderColor;
 
   fontMenu = createSelect();
   fontMenu.option('Barrio');
   fontMenu.option('Codystar');
   fontMenu.option('Homemade Apple');
   fontMenu.option('IM Fell English SC');
-  fontMenu.option('Libre Barcode 128 Text');
   fontMenu.option('Turret Road');
   fontMenu.option('UnifrakturCook');
-  fontMenu.parent('canvas-div');
+  $('.canvas').append.fontMenu;
 
   textSlider = createSlider(10, 100, 30);
   textSlider.style('width', '80px');
-  textSlider.parent('canvas-div');
+  $('.canvas').append.textSlider;
 
   borderWSlider = createSlider(0, 100, 30);
   borderWSlider.style('width', '80px');
-  borderWSlider.parent('canvas-div');
+  $('.canvas').append.borderWSlider;
 
   textAlign(CENTER, CENTER);
-  textfield = select('#title');
-  button = createButton('save');
-  button.parent('canvas-div');
+  textfield = select('#story-title');
 }
 
 function gradientBG() {
