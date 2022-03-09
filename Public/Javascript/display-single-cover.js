@@ -2,19 +2,25 @@
 // also know as name spacing
 
 var coverGen = function (p) {
+
+  // will be used later in windowResized to gather width information on the story-text div
+  let w;
+
+  // captures the current id
   var id = window.location.toString().split('/')[
     window.location.toString().split('/').length - 1
   ];
+  //console.log(id);
 
-  console.log(id);
-
+  // fetch request that gathers cover data according to id
   function fetchCover() {
     fetch(`/api/stories/${id}`)
       .then((response) => response.json())
       .then((dbStoryData) => {
-        console.log(dbStoryData);
+        //console.log(dbStoryData);
         const c = dbStoryData;
-         // console.log(c);
+        // console.log(c);
+        // c.cover_color
         p.fill(c.cover_color);
         p.stroke(c.border_color);
         p.strokeWeight(c.border_width);
@@ -24,7 +30,8 @@ var coverGen = function (p) {
         p.fill(c.title_color);
         var titleSize = c.font_size;
         p.textFont(c.font);
-        p.text(c.title, p.width/2, p.height/2, p.width, p.height);
+        p.textAlign(p.CENTER, p.CENTER);
+        p.text(c.title, 0, 0, p.width, p.height);
         p.textSize(titleSize);
       });
   }
@@ -47,18 +54,25 @@ var coverGen = function (p) {
     });
   }
 
+  // p5 function that only runs once and initialiazes the canvas
   p.setup = function () {
     var cnv = p.createCanvas(250, 350);
-    $('#coversketch').append(cnv);
-    // cnv.parent('coversketch');
+    //$('.coversketch').append(cnv);
+    cnv.parent('coversketch');
     cnv.style('z-index: 1');
-   // p.fill(0);
+    // p.fill(0);
+  };
+
+  // continuous p5 function that allows the div to be resized
+  p.draw = function () {
     fetchCover();
   };
 
-  // p.draw()=function(){
-  //   postCover();
-  // }
+  // resizes the canvas/cover everytime the window is resized according to half the width of the div below it
+  p.windowResized = function () {
+    w = p.select('#grabbing-size').width / 2;
+    p.resizeCanvas(w, w * 1.408);
+  };
 };
 
-var myp5 = new p5(coverGen);
+new p5(coverGen);

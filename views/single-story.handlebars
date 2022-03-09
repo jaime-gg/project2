@@ -1,25 +1,33 @@
-<div class="user-list">
-    {{> story-info story}}
-    <div>
+<div class="user-list"><div class="main-story-info"><div id="coversketch"></div><div class="side-story">{{> story-info story}}</div>
+    
+    </div>
+  <div class="story-text" id="grabbing-size">
       <p class="story-body">{{story.body}}</p>
     </div>
-</div>
+    
 
-{{#if loggedIn}}
+    <div class="user">
+      {{#if loggedIn}}
 <form class="comment-form">
   <p class="form-label">Leave A Comment:</p>
   <div>
-    <textarea class="form-input" name="comment-body"></textarea>
+    <textarea class="form-input comment-body" name="comment-body"></textarea>
   </div>
 
   <div>
     <button class="button" type="submit">add comment</button>
   </div>
 </form>
+</div>
 {{/if}}
 
 {{> comments story.comments}}
+</div>
+
+
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 {{/if}}
+
+<script src="/javascript/display-single-cover.js"></script>

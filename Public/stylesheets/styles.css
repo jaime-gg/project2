@@ -69,6 +69,7 @@ a:hover {
   height: 100vh;
   font-weight: 600;
   font-size: 100%;
+  border-right: 12px double var(--light);
 }
 .nav {
   margin: 7%;
@@ -242,6 +243,7 @@ form label {
 .user {
   background-color: var(--secondary);
   border-radius: 10px;
+ border: 12px outset var(--primary);
 }
 
 .username-link {
@@ -261,6 +263,20 @@ form label {
 }
 
 /* view stories -------------------------------------------------------------------------------*/
+.main-story-info{
+  display: flex;
+  flex-flow: column;
+  justify-content:  center;
+  /* flex-wrap: wrap; */
+}
+#coversketch{
+  flex: 1;
+  align-self: center;
+}
+
+.side-story{
+  flex:1;
+}
 
 .story-list {
   list-style: none;
@@ -299,6 +315,25 @@ form label {
   margin: 10px;
 }
 
+.story-text{
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  border: 12px outset var(--primary);
+}
+.published{
+  text-align: right;
+}
+/* comments ------------------------------- */
+
+.comments{
+  border: 12px outset var(--primary);
+}
+
+.comment{
+  background: light;
+  border-radius: 15px;
+}
 
 /* MOBILE RESPONSIVENESS  ---------------------------------------------------------------------------------*/
 
