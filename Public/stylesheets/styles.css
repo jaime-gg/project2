@@ -259,7 +259,9 @@ form label {
 .user-body {
   padding: 10px;
 }
-/* view stories */
+
+/* view stories -------------------------------------------------------------------------------*/
+
 .story-list {
   list-style: none;
   display: flex;
@@ -291,6 +293,11 @@ form label {
   padding: 0px 10px;
 }
 
+ .user >p {
+  color: var(--quaternary);
+  font-weight: 600;
+  margin: 10px;
+}
 
 
 /* MOBILE RESPONSIVENESS  ---------------------------------------------------------------------------------*/
