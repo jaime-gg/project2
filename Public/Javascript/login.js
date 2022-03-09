@@ -28,6 +28,8 @@ async function loginFormHandler(event) {
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
+    const title = "First Story"
+    const body = "First Story body"
   
     if (username && email && password) {
       const response = await fetch('/api/users', {
@@ -39,8 +41,17 @@ async function loginFormHandler(event) {
         }),
         headers: { 'Content-Type': 'application/json' }
       });
+
+      const response2 = await fetch('/api/stories', {
+        method: 'post',
+        body: JSON.stringify({
+          title,
+          body
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      });
   
-      if (response.ok) {
+      if (response.ok && response2.ok) {
         document.location.replace('/profile/');
       } else {
         alert(response.statusText);
