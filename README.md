@@ -3,6 +3,8 @@
 ## Project Summary
 As a team we have found that there is a need for an easy and well maintained platform for aspiring authors to post their content. As such our team aims to develop an application to allow users to self publish their written material. 
 We will provide users with the ability to create accounts, login, privately store their works, and publicly publish their works. Additionally, we wish to include bookmark features and the ability for readers and authors to leave comments. 
+
+Launched Website: https://store-ez.herokuapp.com/ 
 ...
 
 ## Developers
@@ -22,7 +24,15 @@ We will provide users with the ability to create accounts, login, privately stor
 
 ## Animated Gifs/Pictures of App
 
-- Place various screens of your app here after they have been built
+![Image of our homepage..](./assets/1.png)
+
+
+![image of our login page.](./assets/2.png)
+
+
+![Image of our View Authors Page.](./assets/3.png)
+
+![Gif of a user logging in and creating a new story.](./assets/4.gif)
 
 ## Tech Stack
 
