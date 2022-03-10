@@ -16,21 +16,13 @@ const commentdata = [
     user_id: 3,
     story_id: 10
   },
-  {
-    comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
-    user_id: 3,
-    story_id: 18
-  },
+
   {
     comment_text: 'In hac habitasse platea dictumst.',
     user_id: 7,
     story_id: 5
   },
-  {
-    comment_text: 'Vivamus vestibulum sagittis sapien.',
-    user_id: 1,
-    story_id: 20
-  },
+
   {
     comment_text: 'Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.',
     user_id: 6,
@@ -46,11 +38,7 @@ const commentdata = [
     user_id: 6,
     story_id: 12
   },
-  {
-    comment_text: 'Morbi a ipsum.',
-    user_id: 6,
-    story_id: 20
-  },
+
   {
     comment_text: 'Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.',
     user_id: 3,
@@ -83,12 +71,7 @@ const commentdata = [
     user_id: 8,
     story_id: 2
   },
-  {
-    comment_text:
-      'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est.',
-    user_id: 2,
-    story_id: 20
-  },
+
   {
     comment_text: 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.',
     user_id: 4,
@@ -100,12 +83,7 @@ const commentdata = [
     user_id: 5,
     story_id: 13
   },
-  {
-    comment_text:
-      'Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
-    user_id: 9,
-    story_id: 16
-  },
+
   {
     comment_text: 'Curabitur convallis.',
     user_id: 6,
@@ -143,16 +121,8 @@ const commentdata = [
     user_id: 1,
     story_id: 15
   },
-  {
-    comment_text: 'Nam tristique tortor eu pede.',
-    user_id: 4,
-    story_id: 16
-  },
-  {
-    comment_text: 'Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.',
-    user_id: 4,
-    story_id: 18
-  },
+
+
   {
     comment_text: 'Proin eu mi. Nulla ac enim.',
     user_id: 4,
@@ -168,11 +138,7 @@ const commentdata = [
     user_id: 10,
     story_id: 1
   },
-  {
-    comment_text: 'Donec quis orci eget orci vehicula condimentum.',
-    user_id: 3,
-    story_id: 19
-  },
+
   {
     comment_text: 'Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.',
     user_id: 5,
@@ -196,18 +162,8 @@ const commentdata = [
   {
     comment_text: 'Etiam vel augue. Vestibulum rutrum rutrum neque.',
     user_id: 8,
-    story_id: 5
   },
-  {
-    comment_text: 'Proin at turpis a pede posuere nonummy.',
-    user_id: 8,
-    story_id: 19
-  },
-  {
-    comment_text: 'Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.',
-    user_id: 9,
-    story_id: 19
-  },
+
   {
     comment_text:
       'Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.',
@@ -236,22 +192,13 @@ const commentdata = [
     user_id: 7,
     story_id: 9
   },
-  {
-    comment_text: 'Integer ac leo. Pellentesque ultrices mattis odio.',
-    user_id: 4,
-    story_id: 19
-  },
+
   {
     comment_text: 'Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.',
     user_id: 10,
     story_id: 1
   },
-  {
-    comment_text:
-      'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus.',
-    user_id: 2,
-    story_id: 19
-  },
+
   {
     comment_text: 'Proin risus. Praesent lectus.',
     user_id: 10,
