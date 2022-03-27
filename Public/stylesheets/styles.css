@@ -300,7 +300,6 @@ form label {
 
 .story-header{
   background-color: #d0e2c09a;
-  border-radius: 10px 10px 0px 0px;
   border: 2px solid var(--secondary);
   padding: 0.5rem;
   display: flex;
